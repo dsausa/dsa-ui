@@ -1,7 +1,5 @@
-# Ignore artifacts:
-build
 dist
 node_modules
 www
-**.md
+*.md
 components.d.ts

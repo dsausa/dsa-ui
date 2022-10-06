@@ -24,5 +24,6 @@ module.exports = {
         "@stencil/strict-boolean-conditions": "off",
         // This rule seems to be broken currently.
         "@stencil/decorators-context": "off",
+        "@typescript-eslint/no-explicit-any": "off",
     }
 }
