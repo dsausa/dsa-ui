@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/components/my-component/my-component.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MyComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "first",
+              "type": {
+                "text": "string"
+              },
+              "description": "The first name"
+            },
+            {
+              "kind": "field",
+              "name": "middle",
+              "type": {
+                "text": "string"
+              },
+              "description": "The middle name"
+            },
+            {
+              "kind": "field",
+              "name": "last",
+              "type": {
+                "text": "string"
+              },
+              "description": "The last name"
+            },
+            {
+              "kind": "method",
+              "name": "getText",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "string"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "render"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "first",
+              "fieldName": "first",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "name": "middle",
+              "fieldName": "middle",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "name": "last",
+              "fieldName": "last",
+              "type": {
+                "text": "string"
+              }
+            }
+          ],
+          "tagName": "my-component",
+          "events": [],
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MyComponent",
+          "declaration": {
+            "name": "MyComponent",
+            "module": "src/components/my-component/my-component.tsx"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "my-component",
+          "declaration": {
+            "name": "MyComponent",
+            "module": "src/components/my-component/my-component.tsx"
+          }
+        }
+      ]
+    }
+  ]
+}

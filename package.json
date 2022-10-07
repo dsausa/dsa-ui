@@ -20,20 +20,24 @@
   ],
   "scripts": {
     "build": "stencil build --docs",
-    "start-test": "concurrently -n \"stencil,storybook\" -c \"white,#ff4785\" \"stencil build --watch\" \"start-storybook -p 6006\"",
+    "start": "concurrently -k -n \"stencil,sb,cem\" -c \"white,#ff4785,blue\" \"stencil build --watch\" \"start-storybook -p 6006\" \"cem analyze --globs \"src/**/*.tsx\" --stencil --watch\"",
+    "start:open": "npm run start && start http://localhost:6006",
     "stencil:dev": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll",
+    "test:watch": "stencil test --spec --e2e --watchAll",
+    "test:unit:watch": "stencil test --spec --watchAll",
     "generate": "stencil generate",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint": "eslint src/**/*{.ts,.tsx}"
+    "lint": "prettier --write src/**/*{.ts,.tsx} && eslint src/**/*{.ts,.tsx}",
+    "cem:build": "cem analyze --globs \"src/**/*.tsx\" --stencil"
   },
   "dependencies": {
     "@stencil/core": "^2.13.0"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
+    "@custom-elements-manifest/analyzer": "^0.6.4",
     "@stencil/eslint-plugin": "^0.4.0",
     "@storybook/addon-actions": "^6.5.12",
     "@storybook/addon-essentials": "^6.5.12",
@@ -52,7 +56,6 @@
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",
     "lit-html": "^2.3.1",
-    "markdown-tables-to-json": "^0.1.7",
     "prettier": "2.7.1",
     "puppeteer": "^10.0.0",
     "typescript": "^4.8.4"
