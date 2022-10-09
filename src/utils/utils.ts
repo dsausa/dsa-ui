@@ -8,3 +8,6 @@ export const formatArgs = (args: { [x: string]: any }) =>
   Object.keys(args)
     .map(key => `${key}="${args[key]}"`)
     .join(' ');
+
+/*** Shortcut to readable class lists; not dynamic */
+export const classNames = (...args) => args.join(' ');

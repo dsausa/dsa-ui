@@ -46,6 +46,10 @@
               }
             },
             {
+              "kind": "field",
+              "name": "classes"
+            },
+            {
               "kind": "method",
               "name": "render"
             }
