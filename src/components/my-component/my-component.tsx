@@ -1,5 +1,5 @@
 import { Component, Prop, h } from '@stencil/core';
-import { classNames as classes } from '../../utils/utils';
+import { formatClasses } from '../../utils/utils';
 
 @Component({
   tag: 'my-component',
@@ -22,27 +22,27 @@ export class MyComponent {
    */
   @Prop() last: string;
 
+  /** @internal */
   private getText(): string {
-    return (
-      (this.first || '') +
-      (this.middle ? ` ${this.middle}` : '') +
-      (this.last ? ` ${this.last}` : '')
-    );
+    return [this.first, this.middle, this.last].filter(x => x).join(' ');
   }
 
   // Made this simple function to make readable class lists.
   // For dynamic classes, use an object instead of the classNames function.
   // For example: `<div class={{'error': this.hasError, 'hidden': !this.isOpen}} />
-  classes = classes(
+  // USE THIS DECORATOR TO AVOID GENERATING STORYBOOK CONTROLS:
+  /** internal */
+  private classes = formatClasses(
     'bg-rose-500',
     'p-6',
     'rounded-md',
     'flex',
     'justify-center',
     'font-sans',
-    'text-wTestwardhite',
+    'text-white',
   );
 
+  /** @internal */
   render() {
     return <div class={this.classes}>Hello, World! I'm {this.getText()}</div>;
   }

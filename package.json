@@ -20,7 +20,8 @@
   ],
   "scripts": {
     "build": "stencil build --docs",
-    "start": "concurrently -k -n \"stencil,sb,cem\" -c \"white,#ff4785,blue\" \"stencil build --watch\" \"start-storybook -p 6006\" \"cem analyze --globs \"src/**/*.tsx\" --stencil --watch\"",
+    "build:cem": "cem analyze --dev --watch",
+    "start": "concurrently -k -n \"stencil,sb,cem\" -c \"white,#ff4785,blue\" \"stencil build --watch\" \"start-storybook -p 6006\" \"cem analyze --dev --watch\"",
     "start:open": "npm run start && start http://localhost:6006",
     "stencil:dev": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",

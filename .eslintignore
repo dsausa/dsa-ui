@@ -1,3 +1,4 @@
 .eslintrc.js
 stencil.config.ts
+custom-elements-manifest.config.mjs
 dist

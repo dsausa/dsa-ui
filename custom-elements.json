@@ -36,22 +36,10 @@
               "description": "The last name"
             },
             {
-              "kind": "method",
-              "name": "getText",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "string"
-                }
-              }
-            },
-            {
               "kind": "field",
-              "name": "classes"
-            },
-            {
-              "kind": "method",
-              "name": "render"
+              "name": "classes",
+              "privacy": "private",
+              "description": "internal"
             }
           ],
           "attributes": [
