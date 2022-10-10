@@ -1,9 +1,9 @@
 import { defineCustomElements } from '../dist/esm/loader';
-import { setCustomElementsManifest } from '@storybook/web-components';
+import { setCustomElementsManifestWithOptions } from './cemOpts';
 import manifest from '../custom-elements.json';
 
 defineCustomElements();
-setCustomElementsManifest(manifest)
+setCustomElementsManifestWithOptions(manifest, { privateFields: false });
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

@@ -38,8 +38,11 @@
             {
               "kind": "field",
               "name": "classes",
-              "privacy": "private",
-              "description": "internal"
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "render"
             }
           ],
           "attributes": [

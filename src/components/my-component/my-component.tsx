@@ -31,7 +31,6 @@ export class MyComponent {
   // For dynamic classes, use an object instead of the classNames function.
   // For example: `<div class={{'error': this.hasError, 'hidden': !this.isOpen}} />
   // USE THIS DECORATOR TO AVOID GENERATING STORYBOOK CONTROLS:
-  /** internal */
   private classes = formatClasses(
     'bg-rose-500',
     'p-6',
@@ -42,7 +41,6 @@ export class MyComponent {
     'text-white',
   );
 
-  /** @internal */
   render() {
     return <div class={this.classes}>Hello, World! I'm {this.getText()}</div>;
   }
