@@ -1,0 +1,69 @@
+{
+  "name": "@dsa-ui/wc",
+  "author": "DSA National Tech Committee (http://tech.dsausa.org)",
+  "version": "0.0.11",
+  "description": "DSA Design System",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/dsa-ui/dsa-ui.esm.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ionic-team/stencil-component-starter.git"
+  },
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build --docs && cd ../react && npm run build",
+    "start": "concurrently -k -n \"stencil,sb,cem\" -c \"white,#ff4785,blue\" \"stencil build --watch\" \"start-storybook -p 6006\" \"cem analyze --dev --watch\"",
+    "start:open": "npm run start && start http://localhost:6006",
+    "stencil:dev": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test:watch": "stencil test --spec --e2e --watchAll",
+    "test:unit:watch": "stencil test --spec --watchAll",
+    "generate": "stencil generate",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "lint": "prettier --write src/**/*{.ts,.tsx} && eslint src/**/*{.ts,.tsx}",
+    "cem:build": "cem analyze --globs \"src/**/*.tsx\" --stencil"
+  },
+  "dependencies": {
+    "@stencil/core": "^2.13.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@custom-elements-manifest/analyzer": "^0.6.4",
+    "@stencil/eslint-plugin": "^0.4.0",
+    "@stencil/react-output-target": "^0.3.1",
+    "@storybook/addon-actions": "^6.5.12",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/builder-webpack4": "^6.5.12",
+    "@storybook/manager-webpack4": "^6.5.12",
+    "@storybook/web-components": "^6.5.12",
+    "@types/jest": "^27.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.39.0",
+    "babel-loader": "^8.2.5",
+    "concurrently": "^7.4.0",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.31.8",
+    "jest": "^27.4.5",
+    "jest-cli": "^27.4.5",
+    "lit-html": "^2.3.1",
+    "postcss": "^8.4.17",
+    "prettier": "2.7.1",
+    "puppeteer": "^10.0.0",
+    "stencil-tailwind-plugin": "^1.6.0",
+    "tailwindcss": "^3.1.8",
+    "typescript": "^4.8.4"
+  },
+  "license": "MIT"
+}

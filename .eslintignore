@@ -1,0 +1,5 @@
+.eslintrc.js
+wc/stencil.config.ts
+custom-elements-manifest.config.mjs
+dist
+react-lib
