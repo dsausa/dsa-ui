@@ -1,4 +1,4 @@
-import { formatArgs } from '../../utils/utils';
+import { formatArgs } from './utils/utils';
 
 export default {
   title: 'Example/MyComponent',

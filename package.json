@@ -1,0 +1,27 @@
+{
+  "name": "dsa-ui",
+  "description": "DSA Design System",
+  "scripts": {
+    "test": "cd wc/ && npm run test",
+    "start": "cd wc/ && npm start",
+    "init": "npm run init:react && npm run init:wc",
+    "build": "npm run build:wc && npm run build:react",
+    "pub": "npm run build && npm run pub:wc && npm run pub:react",
+    "init:wc": "cd wc/ && npm i",
+    "init:react": "cd react/ && npm i",
+    "build:wc": "cd wc/ && npm run build",
+    "build:react": "cd react/ && npm run build",
+    "pub:wc": "cd wc/ && npm publish --access public",
+    "pub:react": "cd react/ && npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nedredmond/dsa-ui.git"
+  },
+  "author": "DSA NTC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nedredmond/dsa-ui/issues"
+  },
+  "homepage": "https://github.com/nedredmond/dsa-ui#readme"
+}
