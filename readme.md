@@ -62,6 +62,16 @@ npm run build
 npm test
 ```
 
+### Publish a change to NPM
+
+Patch for minor changes, minor for larger changes, and major for mega changes. If you're not sure, make it minor. (This breakdown came from Copilot and I am down with it.)
+
+```bash
+npm run bump --newversion patch
+```
+
+This will ensure tests pass, bump versions on all three `package.json`s, push a version commit, and publish the new versions of the packages.
+
 ## Naming Components
 
 Use the prefix `dsa`, i.e., `dsa-button` or `dsa-card`.
