@@ -31,7 +31,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "prettier --write src/**/*{.ts,.tsx} && eslint src/**/*{.ts,.tsx}",
-    "cem:build": "cem analyze --globs \"src/**/*.tsx\" --stencil"
+    "cem:build": "cem analyze --globs \"src/**/*.tsx\" --stencil",
+    "preversion": "npm test"
   },
   "dependencies": {
     "@stencil/core": "^2.13.0"
