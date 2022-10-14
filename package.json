@@ -16,8 +16,7 @@
     "bump:react": "cd react/ && npm version $npm_package_version",
     "pub:wc": "cd wc/ && npm publish --access public",
     "pub:react": "cd react/ && npm publish --access public",
-    "preversion": "npm test",
-    "version": "npm run bump:wc && npm run bump:react"
+    "version": "npm run bump:wc & npm run bump:react"
   },
   "repository": {
     "type": "git",
