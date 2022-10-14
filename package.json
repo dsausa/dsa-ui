@@ -1,7 +1,7 @@
 {
   "name": "dsa-ui",
   "description": "DSA Design System",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "test": "cd wc/ && npm run test",
     "start": "cd wc/ && npm start",
@@ -12,11 +12,14 @@
     "init:react": "cd react/ && npm i",
     "build:wc": "cd wc/ && npm run build",
     "build:react": "cd react/ && npm run build",
+    "bump": "npm version --commit-hooks=false --git-tag-version=false $npm_config_newversion",
     "bump:wc": "cd wc/ && npm version $npm_package_version",
     "bump:react": "cd react/ && npm version $npm_package_version",
     "pub:wc": "cd wc/ && npm publish --access public",
     "pub:react": "cd react/ && npm publish --access public",
-    "version": "npm run bump:wc & npm run bump:react"
+    "preversion": "npm test",
+    "version": "npm run bump:wc & npm run bump:react",
+    "postversion": "git add package.json wc/package.json wc/package-lock.json react/package.json react/package-lock.json && git commit -m \"Bump versions to $npm_package_version\" && git push && npm run pub"
   },
   "repository": {
     "type": "git",
