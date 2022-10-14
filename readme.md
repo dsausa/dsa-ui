@@ -42,10 +42,10 @@ npm run init
 npm start
 ```
 
->- Starts a build of web components, watches for changes
->- Builds a custom elements manifest that helps Storybook generate helpful docs
->- Starts a Storybook server on `http://localhost:6006`
->
+- Starts a build of web components, watches for changes
+- Builds a custom elements manifest that helps Storybook generate helpful docs
+- Starts a Storybook server on `http://localhost:6006`
+
 _Note: The cem mapping complexity can be removed if we move Storybook to the React project. However, that would require rebuilding the React project on every change, which would add latency to the hot reload._
 
 ### Build For Production
@@ -54,7 +54,7 @@ _Note: The cem mapping complexity can be removed if we move Storybook to the Rea
 npm run build
 ```
 
->Builds web components and syncs the React library.
+Builds web components and syncs the React library.
 
 ### Run Tests
 
