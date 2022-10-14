@@ -1,6 +1,7 @@
 {
   "name": "dsa-ui",
   "description": "DSA Design System",
+  "version": "0.0.1",
   "scripts": {
     "test": "cd wc/ && npm run test",
     "start": "cd wc/ && npm start",
@@ -11,8 +12,12 @@
     "init:react": "cd react/ && npm i",
     "build:wc": "cd wc/ && npm run build",
     "build:react": "cd react/ && npm run build",
+    "bump:wc": "cd wc/ && npm version $npm_package_version",
+    "bump:react": "cd react/ && npm version $npm_package_version",
     "pub:wc": "cd wc/ && npm publish --access public",
-    "pub:react": "cd react/ && npm publish --access public"
+    "pub:react": "cd react/ && npm publish --access public",
+    "preversion": "npm test",
+    "version": "npm run bump:wc && npm run bump:react"
   },
   "repository": {
     "type": "git",
