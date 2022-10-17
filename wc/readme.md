@@ -21,6 +21,7 @@ npm i @dsa-ui/wc
   import { defineCustomElements } from '@dsa-ui/wc';
   defineCustomElements();
   ```
+
   - OR, add an import for any individual component
 
   ```ts
