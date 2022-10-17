@@ -12,7 +12,6 @@ jobs:
           persist-credentials: false
       - name: Install and Build 🔧
         run: | # Install npm packages and build the Storybook files
-          mkdir -p docs
           cd wc
           npm install
           npm run build-storybook
