@@ -29,7 +29,7 @@
     "test:unit:watch": "stencil test --spec --watchAll",
     "generate": "stencil generate",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o docs-build",
+    "build-storybook": "build-storybook",
     "lint": "prettier --write src/**/*{.ts,.tsx} && eslint src/**/*{.ts,.tsx}",
     "cem:build": "cem analyze --globs \"src/**/*.tsx\" --stencil"
   },
