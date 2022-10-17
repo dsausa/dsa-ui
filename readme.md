@@ -64,7 +64,7 @@ npm test
 
 ### Publish a change to NPM
 
-Patch for minor changes, minor for larger changes, and major for mega changes. If you're not sure, make it minor. (This breakdown came from Copilot and I am down with it.)
+__Patch__ for internal changes, __minor__ for new features, and __major__ for breaking changes. If you're not sure, make it minor. (This breakdown came from Copilot and I am down with it.)
 
 ```bash
 npm run bump --newversion patch
@@ -72,41 +72,60 @@ npm run bump --newversion patch
 
 This will ensure tests pass, bump versions on all three `package.json`s, push a version commit, and publish the new versions of the packages.
 
-## Naming Components
+## Creating New Components
 
-Use the prefix `dsa`, i.e., `dsa-button` or `dsa-card`.
+Navigate to `./wc/src/components` and create a new directory for your component. The directory name should be the same as the component name. Use the prefix `dsa`; i.e., `dsa-button` or `dsa-card`.
 
-## Using these components
+Inside the directory, create a `.tsx` file with the same name as the directory. You can use the demo file, `my-component.tsx`, as a template. Additionally, create a `.spec.ts` file for unit tests, a `.e2e.ts` file for end-to-end tests, and a `.css` file if you need styles beyond what Tailwind provides. Please ensure near-complete test coverage.
 
-First of all, [publish to NPM](https://docs.npmjs.com/getting-started/publishing-npm-packages).
+### Component Structure
 
-### Script tag
+```tsx  
 
-- Put a script tag similar to this `<script type='module' src='https://unpkg.com/@dsa-ui/wc@0.0.1/dist/my-component.esm.js'></script>` in the head of your `index.html`
-- Then you can use the library anywhere in your template, JSX, html etc
 
-### Node Modules
+import { Component, Prop, h } from '@stencil/core';
 
-- Run `npm i @dsa-ui/wc`
-or
-`npm i @dsa-ui/react`
-- Put a script tag similar to this `<script type='module' src='node_modules/@dsa-ui/wc/dist/my-component.esm.js'></script>` in the head of your index.html
-- OR, add an import statement within the root component of your application
+@Component({
+  tag: 'dsa-component', // HTML tag
+  styleUrl: 'dsa-component.css', // styles, if needed
+  shadow: true, // set to `true`-- encapsulated DOM and styles
+})
+export class MyComponent {
 
-```ts
-import { defineCustomElements } from '@dsa-ui/wc';
-defineCustomElements();
+  @Prop() name: string; // indicate a public prop (attribute) on the component-- establishes a public API
+
+  private message = "My name is "; // mark an internal prop as private; use `@State()` if you need to trigger a re-render when it changes
+
+  render() { // return JSX, just like React
+    return (
+      <p>
+        {this.message + this.name}
+      </p>
+    );
+  }
+}
 ```
 
-- OR, add an import for any individual component
+For more information on writing Stencil components, see the [Stencil docs](https://stenciljs.com/docs/my-first-component).
 
-```ts
-import { HelloWorld } from 'my-library/dist/components/hello-world';
-customElements.define('hello-world', HelloWorld);
+### Adding a Story
+
+You will also need to create a `.stories.tsx` file for Storybook in the `./wc/stories` directory. This file will be used to generate documentation and test the component in different states.
+
+```js
+// full, working example of a generated story
+import { formatArgs } from './utils/utils';
+
+export default {
+  title: 'Example/MyComponent',
+  component: 'my-component',
+};
+
+const Template = (args) => `<my-component ${formatArgs(args)}></my-component>`;
+
+export const Default = Template.bind({});
 ```
 
-- Then you can use the element anywhere in your template, JSX, html etc
-
-### More strategies and use cases can be found within the Stencil docs
+In many cases, you will only need to change the `title` and `component` variables, and the tag name in the `Template()` function. If your need is more complex, consult the [Storybook documentation](https://storybook.js.org/docs/web-components/writing-stories/introduction).
 
 ![Built With Stencil](https://img.shields.io/badge/-Built%20With%20Stencil-16161d.svg?logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjIuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI%2BCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI%2BCgkuc3Qwe2ZpbGw6I0ZGRkZGRjt9Cjwvc3R5bGU%2BCjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00MjQuNywzNzMuOWMwLDM3LjYtNTUuMSw2OC42LTkyLjcsNjguNkgxODAuNGMtMzcuOSwwLTkyLjctMzAuNy05Mi43LTY4LjZ2LTMuNmgzMzYuOVYzNzMuOXoiLz4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTQyNC43LDI5Mi4xSDE4MC40Yy0zNy42LDAtOTIuNy0zMS05Mi43LTY4LjZ2LTMuNkgzMzJjMzcuNiwwLDkyLjcsMzEsOTIuNyw2OC42VjI5Mi4xeiIvPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNDI0LjcsMTQxLjdIODcuN3YtMy42YzAtMzcuNiw1NC44LTY4LjYsOTIuNy02OC42SDMzMmMzNy45LDAsOTIuNywzMC43LDkyLjcsNjguNlYxNDEuN3oiLz4KPC9zdmc%2BCg%3D%3D&colorA=16161d&style=flat-square)
