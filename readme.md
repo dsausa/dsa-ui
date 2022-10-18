@@ -2,6 +2,8 @@
 
 This is a design system built with [Stencil](https://stenciljs.com/), [Tailwind](https://tailwindcss.com/), and [Storybook](https://tailwindcss.com/) for Democratic Socialists of America sites and applications by the DSA National Tech Committee.
 
+> _DISCLAIMER: This is an exploratory respository and not yet officially endorsed by the DSA nor the National Tech Committee. While it is public for now, that is subject to change._
+
 ## Getting Started
 
 ### Quick Tour

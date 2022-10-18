@@ -1,5 +1,7 @@
 # Installation
 
+> _DISCLAIMER: This library is exclusively for use by DSA members and allies. Content included but not limited to the DSA logo and color palette information may only be used for official DSA business._
+
 ```bash
 npm i @dsa-ui/wc
 ```
