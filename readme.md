@@ -69,7 +69,7 @@ npm test
 __Patch__ for internal changes, __minor__ for new features, and __major__ for breaking changes. If you're not sure, make it minor. (This breakdown came from Copilot and I am down with it.)
 
 ```bash
-npm run bump --newversion patch
+npm run bump --newversion=patch
 ```
 
 This will ensure tests pass, bump versions on all three `package.json`s, push a version commit, and publish the new versions of the packages.
