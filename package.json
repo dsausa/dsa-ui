@@ -33,6 +33,7 @@
   },
   "homepage": "https://github.com/nedredmond/dsa-ui#readme",
   "devDependencies": {
-    "@storybook/storybook-deployer": "^2.8.12"
+    "@storybook/storybook-deployer": "^2.8.12",
+    "@types/node": "^18.11.9"
   }
 }
