@@ -5,7 +5,6 @@ import { formatClasses, maybeLoadFont } from '../../utils/utils';
   tag: 'my-component',
   styleUrl: 'my-component.css',
   shadow: true,
-  assetsDirs: ['../../assets'],
 })
 export class MyComponent {
   /**
@@ -34,7 +33,7 @@ export class MyComponent {
   // Made this simple function to make readable class lists.
   // For dynamic classes, use an object instead of the classNames function.
   // For example: `<div class={{'error': this.hasError, 'hidden': !this.isOpen}} />
-  // USE THIS DECORATOR TO AVOID GENERATING STORYBOOK CONTROLS:
+  // MAKE PRIVATE TO AVOID GENERATING STORYBOOK DOCUMENTATION:
   private classes = formatClasses(
     'btn',
   );

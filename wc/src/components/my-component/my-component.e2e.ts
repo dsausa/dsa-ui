@@ -4,17 +4,18 @@ describe('my-component', () => {
   it('renders', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<my-component></my-component>');
+    await page.setContent('<my-component />');
     const element = await page.find('my-component');
+    console.log(element.classList);
     expect(element).toHaveClass('hydrated');
   });
 
   it('renders changes to the name data', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<my-component></my-component>');
+    await page.setContent('<my-component />');
     const component = await page.find('my-component');
-    const element = await page.find('my-component >>> div');
+    const element = await page.find('my-component >>> btn');
     expect(element.textContent).toEqual(`Hello, World! I'm `);
 
     component.setProperty('first', 'James');
