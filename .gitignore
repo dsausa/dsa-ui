@@ -65,6 +65,7 @@ dist/
 www/
 loader/
 out*/
+wc/assets/
 
 *~
 *.sw[mnpcod]
