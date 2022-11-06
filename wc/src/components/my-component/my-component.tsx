@@ -1,10 +1,11 @@
 import { Component, Prop, h } from '@stencil/core';
-import { formatClasses } from '../../utils/utils';
+import { formatClasses, maybeLoadFont } from '../../utils/utils';
 
 @Component({
   tag: 'my-component',
   styleUrl: 'my-component.css',
   shadow: true,
+  assetsDirs: ['../../assets'],
 })
 export class MyComponent {
   /**
@@ -22,6 +23,10 @@ export class MyComponent {
    */
   @Prop() last: string;
 
+  componentDidLoad() {
+    maybeLoadFont();
+  }
+
   private getText(): string {
     return [this.first, this.middle, this.last].filter(x => x).join(' ');
   }
@@ -31,16 +36,10 @@ export class MyComponent {
   // For example: `<div class={{'error': this.hasError, 'hidden': !this.isOpen}} />
   // USE THIS DECORATOR TO AVOID GENERATING STORYBOOK CONTROLS:
   private classes = formatClasses(
-    'bg-rose-500',
-    'p-6',
-    'rounded-md',
-    'flex',
-    'justify-center',
-    'font-sans',
-    'text-white',
+    'btn',
   );
 
   render() {
-    return <div class={this.classes}>Hello, World! I'm {this.getText()}</div>;
+    return <btn class={this.classes}>Hello, World! I'm {this.getText()}</btn>;
   }
 }

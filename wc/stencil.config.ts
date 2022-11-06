@@ -37,6 +37,13 @@ export const config: Config = {
     {
       type: 'dist-custom-elements',
       generateTypeDeclarations: true,
+      copy: [
+        {
+          src: 'assets',
+          dest: 'dist/components/assets',
+          warn: true,
+        }
+      ]
     },
   ],
 };
