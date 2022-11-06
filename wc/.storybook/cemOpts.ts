@@ -19,7 +19,7 @@ export const setCustomElementsManifestWithOptions = (
     }
     if (!mapMembersToAttributes) {
         actOnDeclarations(customElements, declaration => {
-            const attrs = declaration.attributes;
+            const attrs = declaration.attributes || [];
             const members = declaration.members;
             // Members includes all attributes, properties, and internal fields,
             // whether private or not. Attributes are the members marked with
