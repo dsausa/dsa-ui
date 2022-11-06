@@ -1,7 +1,7 @@
 {
   "name": "dsa-ui",
   "description": "DSA Design System",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "scripts": {
     "test": "cd wc/ && npm run test",
     "start": "cd wc/ && npm start",
