@@ -1,7 +1,7 @@
 {
   "name": "dsa-ui",
   "description": "DSA Design System",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "test": "cd wc/ && npm run test",
     "start": "cd wc/ && npm start",
@@ -17,9 +17,9 @@
     "bump:react": "cd react/ && npm version $npm_package_version",
     "pub:wc": "cd wc/ && npm publish --access public",
     "pub:react": "cd react/ && npm publish --access public",
-    "preversion": "npm test",
+    "preversion": "git switch main & npm test",
     "version": "npm run bump:wc & npm run bump:react",
-    "postversion": "git add package.json wc/package.json wc/package-lock.json react/package.json react/package-lock.json && git commit -m \"Bump versions to $npm_package_version\" && git push && npm run pub",
+    "postversion": "git switch -c $npm_package_version & git add package.json wc/package.json wc/package-lock.json react/package.json react/package-lock.json && git commit -m \"Bump versions to $npm_package_version\" && git push --set-upstream origin $npm_package_version && gh pr create -f && npm run pub",
     "deploy": "storybook-to-ghpages --packages wc"
   },
   "repository": {
