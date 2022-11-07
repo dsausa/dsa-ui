@@ -11,7 +11,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                'sans': ['styrene', ...defaultTheme.fontFamily.sans],
+                'sans': ['klima', ...defaultTheme.fontFamily.sans],
             }
         }
     },

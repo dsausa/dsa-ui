@@ -1,10 +1,11 @@
 import { Component, Prop, h } from '@stencil/core';
-import { formatClasses, maybeLoadFont } from '../../utils/utils';
+import { formatClasses, maybeLoadFonts } from '../../utils/utils';
 
 @Component({
   tag: 'my-component',
   styleUrl: 'my-component.css',
   shadow: true,
+  assetsDirs: ['../assets'],
 })
 export class MyComponent {
   /**
@@ -23,7 +24,7 @@ export class MyComponent {
   @Prop() last: string;
 
   componentDidLoad() {
-    maybeLoadFont();
+    maybeLoadFonts();
   }
 
   private getText(): string {
