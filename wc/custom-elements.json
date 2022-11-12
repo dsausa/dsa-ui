@@ -112,6 +112,44 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/icons/envelope.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "EnvelopeIcon",
+          "members": [
+            {
+              "kind": "method",
+              "name": "render"
+            }
+          ],
+          "tagName": "dsa-envelope-icon",
+          "events": [],
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "EnvelopeIcon",
+          "declaration": {
+            "name": "EnvelopeIcon",
+            "module": "src/components/icons/envelope.tsx"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "dsa-envelope-icon",
+          "declaration": {
+            "name": "EnvelopeIcon",
+            "module": "src/components/icons/envelope.tsx"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/forms/dsa-checkbox/dsa-checkbox.tsx",
       "declarations": [
         {

@@ -32,6 +32,8 @@ export namespace Components {
          */
         "value": string;
     }
+    interface DsaEnvelopeIcon {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -62,6 +64,12 @@ declare global {
         prototype: HTMLDsaCheckboxElement;
         new (): HTMLDsaCheckboxElement;
     };
+    interface HTMLDsaEnvelopeIconElement extends Components.DsaEnvelopeIcon, HTMLStencilElement {
+    }
+    var HTMLDsaEnvelopeIconElement: {
+        prototype: HTMLDsaEnvelopeIconElement;
+        new (): HTMLDsaEnvelopeIconElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -70,6 +78,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "dsa-checkbox": HTMLDsaCheckboxElement;
+        "dsa-envelope-icon": HTMLDsaEnvelopeIconElement;
         "my-component": HTMLMyComponentElement;
     }
 }
@@ -101,6 +110,8 @@ declare namespace LocalJSX {
          */
         "value"?: string;
     }
+    interface DsaEnvelopeIcon {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -121,6 +132,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "dsa-checkbox": DsaCheckbox;
+        "dsa-envelope-icon": DsaEnvelopeIcon;
         "my-component": MyComponent;
     }
 }
@@ -129,6 +141,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "dsa-checkbox": LocalJSX.DsaCheckbox & JSXBase.HTMLAttributes<HTMLDsaCheckboxElement>;
+            "dsa-envelope-icon": LocalJSX.DsaEnvelopeIcon & JSXBase.HTMLAttributes<HTMLDsaEnvelopeIconElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
