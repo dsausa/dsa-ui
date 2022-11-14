@@ -1,11 +1,15 @@
 import { Config } from '@stencil/core';
-import tailwind, { tailwindHMR } from 'stencil-tailwind-plugin';
+import tailwind, { PluginOpts, tailwindHMR } from 'stencil-tailwind-plugin';
 import { reactOutputTarget } from '@stencil/react-output-target';
+import tailwindConf from './tailwind.config';
 
 export const config: Config = {
   namespace: 'dsa-ui',
   plugins: [
-    tailwind(),
+    tailwind({
+      ...PluginOpts.DEFAULT,
+      tailwindConf,
+    }),
     tailwindHMR(),
   ],
   outputTargets: [

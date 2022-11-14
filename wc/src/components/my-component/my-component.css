@@ -1,3 +1,11 @@
 :host {
   display: block;
 }
+
+.primary {
+  @apply bg-red p-6 rounded-md flex justify-center font-sans text-white;
+}
+
+.secondary {
+  @apply bg-black p-6 rounded-md flex justify-center font-sans text-white;
+}

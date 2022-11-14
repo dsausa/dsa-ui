@@ -1,5 +1,5 @@
 import { Component, Prop, h } from '@stencil/core';
-import { formatClasses, maybeLoadFonts } from '../../utils/utils';
+import { maybeLoadFonts } from '../../utils/utils';
 
 @Component({
   tag: 'my-component',
@@ -23,6 +23,11 @@ export class MyComponent {
    */
   @Prop() last: string;
 
+  /**
+   * `primary` or `secondary` styling
+   */
+  @Prop() styling = 'primary';
+
   componentDidLoad() {
     maybeLoadFonts();
   }
@@ -35,11 +40,16 @@ export class MyComponent {
   // For dynamic classes, use an object instead of the classNames function.
   // For example: `<div class={{'error': this.hasError, 'hidden': !this.isOpen}} />
   // MAKE PRIVATE TO AVOID GENERATING STORYBOOK DOCUMENTATION:
-  private classes = formatClasses(
-    'btn',
-  );
+
+  // This is a little silly, but I guess it's what Tailwind craves.
+  // I hope we can find a nicer, tw-parsable way to do this.
+  private classes = {
+    'primary': this.styling == 'primary',
+    'secondary': this.styling == 'secondary',
+  };
 
   render() {
-    return <btn class={this.classes}>Hello, World! I'm {this.getText()}</btn>;
+    console.log(this.styling);
+    return <div class={this.classes}>Hello, World! I'm {this.getText()}</div>;
   }
 }

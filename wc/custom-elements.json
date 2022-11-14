@@ -36,6 +36,15 @@
               "description": "The last name"
             },
             {
+              "kind": "field",
+              "name": "styling",
+              "type": {
+                "text": "string"
+              },
+              "default": "'primary'",
+              "description": "`primary` or `secondary` styling"
+            },
+            {
               "kind": "method",
               "name": "getText",
               "privacy": "private",
@@ -48,7 +57,11 @@
             {
               "kind": "field",
               "name": "classes",
-              "privacy": "private"
+              "type": {
+                "text": "object"
+              },
+              "privacy": "private",
+              "default": "{\n    'primary': this.styling == 'primary',\n    'secondary': this.styling == 'secondary',\n  }"
             },
             {
               "kind": "method",
@@ -76,6 +89,10 @@
               "type": {
                 "text": "string"
               }
+            },
+            {
+              "name": "styling",
+              "fieldName": "styling"
             }
           ],
           "tagName": "my-component",
