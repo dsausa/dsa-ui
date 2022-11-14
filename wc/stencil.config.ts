@@ -1,27 +1,11 @@
 import { Config } from '@stencil/core';
-import tailwind, { PluginOpts, tailwindHMR } from 'stencil-tailwind-plugin';
-import tailwindConf from './tailwind.config';
+import tailwind, { tailwindHMR } from 'stencil-tailwind-plugin';
 import { reactOutputTarget } from '@stencil/react-output-target';
-import tailwindcss from "tailwindcss";
-import autoprefixer from "autoprefixer";
-import replace from "postcss-replace";
 
 export const config: Config = {
   namespace: 'dsa-ui',
   plugins: [
-    tailwind({
-      ...PluginOpts.DEFAULT,
-      tailwindConf,
-      postcss: {
-        plugins: [
-          tailwindcss(),
-          replace({ pattern: /html/g, commentsOnly: false, data: { replaceAll: ':host' } }),
-          replace({ pattern: /body/gi, commentsOnly: false, data: { replaceAll: ':host' } }),
-          replace({ pattern: /:root/gi, commentsOnly: false,  data: { replaceAll: ':host' } }),
-          autoprefixer(),
-        ]
-      }
-    }),
+    tailwind(),
     tailwindHMR(),
   ],
   outputTargets: [
