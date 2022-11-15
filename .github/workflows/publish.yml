@@ -8,7 +8,7 @@ on:
       - 'package.json'
       - 'package-lock.json'
 jobs:
-  publish-wc:
+  publish-react:
     if: github.event.pull_request.merged == true && github.event.label.name == 'bump'
     runs-on: ubuntu-latest
     steps:
@@ -25,7 +25,7 @@ jobs:
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-  publish-react:
+  publish-wc:
     if: github.event.pull_request.merged == true && github.event.label.name == 'bump'
     runs-on: ubuntu-latest
     steps:
