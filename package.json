@@ -10,13 +10,14 @@
     "deploy": "storybook-to-ghpages --packages wc",
     "init": "npm run init:wc && npm run init:react",
     "init:ci": "npm run init:ci:wc && npm run init:ci:react",
-    "build:prod": "npm run build:prod:wc && npm run build:prod:react"
+    "build:prod": "npm run build:prod:wc && npm run build:react"
     "init:wc": "cd wc/ && npm i",
     "init:react": "cd react/ && npm i",
     "init:ci:wc": "cd wc/ && npm ci",
     "init:ci:react": "cd react/ && npm ci",
+    "build:wc": "cd wc/ && npm run build",
     "build:prod:wc": "cd wc/ && npm run build:prod",
-    "build:prod:react": "cd react/ && npm run build:prod",
+    "build:react": "cd react/ && npm run build",
     "bump:wc": "cd wc/ && npm version $npm_package_version",
     "bump:react": "cd react/ && npm version $npm_package_version",
     "preversion": "npm test",
