@@ -1,7 +1,7 @@
 {
   "name": "@dsa-ui/react",
   "sideEffects": false,
-  "version": "0.0.6",
+  "version": "0.0.5",
   "description": "React specific wrapper for dsa-ui",
   "repository": {
     "type": "git",
