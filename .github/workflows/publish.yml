@@ -3,13 +3,12 @@ on:
   pull_request:
     types:
       - closed
-      - labeled
     paths:
       - 'package.json'
       - 'package-lock.json'
 jobs:
   publish-react:
-    if: github.event.pull_request.merged == true && github.event.label.name == 'bump'
+    if: github.event.pull_request.merged == true && contains( github.event.pull_request.labels.*.name, 'bump')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
