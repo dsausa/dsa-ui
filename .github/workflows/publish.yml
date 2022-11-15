@@ -27,7 +27,7 @@ jobs:
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-  publish-wc:
+  publish-react:
     needs: if-bump
     runs-on: ubuntu-latest
     steps:
@@ -39,7 +39,7 @@ jobs:
           node-version: 16
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies and build 🔧
-        run: cd ./react && npm ci && npm run build
+        run: cd ./wc && npm ci && npm run build
       - name: Publish package on NPM 📦
         run: npm publish --access public
         env:
