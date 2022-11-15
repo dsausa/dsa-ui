@@ -20,8 +20,9 @@
     "loader/"
   ],
   "scripts": {
-    "build": "stencil build --docs && cd ../react && npm run build",
-    "start": "concurrently -k -n \"stencil,sb,cem\" -c \"white,#ff4785,blue\" \"stencil build --watch\" \"start-storybook -p 6006\" \"cem analyze --dev --watch\"",
+    "build": "stencil build --docs-readme",
+    "build:prod": "stencil build --ci --prod",
+    "start": "concurrently -k -n \"stencil,sb,cem\" -c \"white,#ff4785,blue\" \"stencil build --dev --debug --watch\" \"start-storybook -p 6006\" \"cem analyze --dev --watch\"",
     "start:open": "npm run start && start http://localhost:6006",
     "stencil:dev": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
