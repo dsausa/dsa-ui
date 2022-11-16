@@ -13,7 +13,12 @@
   "unpkg": "dist/dsa-ui/dsa-ui.esm.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ionic-team/stencil-component-starter.git"
+    "url": "https://github.com/nedredmond/dsa-ui",
+    "directory": "wc"
+  },
+  "homepage": "https://nedredmond.github.io/dsa-ui/",
+  "bugs": {
+    "url": "https://github.com/nedredmond/dsa-ui/issues"
   },
   "files": [
     "dist/",
@@ -22,9 +27,8 @@
   "scripts": {
     "build": "stencil build --docs-readme",
     "build:prod": "stencil build --ci --prod",
-    "start": "concurrently -k -n \"stencil,sb,cem\" -c \"white,#ff4785,blue\" \"stencil build --dev --debug --watch\" \"start-storybook -p 6006\" \"cem analyze --dev --watch\"",
-    "start:open": "npm run start && start http://localhost:6006",
-    "stencil:dev": "stencil build --dev --watch --serve",
+    "start": "concurrently -k -n \"stencil,sb,cem\" -c \"white,#ff4785,blue\" \"npm run stencil:dev\" \"start-storybook -p 6006\" \"cem analyze --dev --watch\"",
+    "stencil:dev": "stencil build --dev --debug --verbose --watch",
     "test": "stencil test --spec --e2e",
     "test:watch": "stencil test --spec --e2e --watchAll",
     "test:unit:watch": "stencil test --spec --watchAll",

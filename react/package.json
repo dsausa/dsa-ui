@@ -2,10 +2,15 @@
   "name": "@dsa-ui/react",
   "sideEffects": false,
   "version": "0.0.6",
-  "description": "React specific wrapper for dsa-ui",
+  "description": "React wrapper for dsa-ui",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ionic-team/ionic.git"
+    "url": "https://github.com/nedredmond/dsa-ui",
+    "directory": "react"
+  },
+  "homepage": "https://nedredmond.github.io/dsa-ui/",
+  "bugs": {
+    "url": "https://github.com/nedredmond/dsa-ui/issues"
   },
   "scripts": {
     "build": "npm run clean && npm run compile",

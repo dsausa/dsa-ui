@@ -19,8 +19,9 @@ jobs:
           node-version: 16
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies and build 🔧
-        run: npm run init && npm run build
-      - name: Publish package on NPM 📦
+        run: npm run init:ci && npm run build:prod
+      - name: Publish React components package on NPM 📦
+        working-directory: ./react
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -36,23 +37,12 @@ jobs:
           node-version: 16
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies and build 🔧
-        run: cd ./wc && npm ci && npm run build
-      - name: Publish package on NPM 📦
+        working-directory: ./wc
+        run: npm ci && npm run build:prod
+      - name: Publish web components package on NPM 📦
+        working-directory: ./wc
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-  deploy:
-    needs: [publish-wc]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          registry-url: 'https://registry.npmjs.org'
-      - name: Install dependencies and build 🔧
-        run: npm init && npm run build
-      - name: Deploy to GitHub Pages 🚀
+      - name: Deploy Storybook to GitHub Pages 🚀
         run: npm run deploy
