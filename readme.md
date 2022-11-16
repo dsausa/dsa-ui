@@ -10,9 +10,13 @@ It will incorporate branding from [design.dsausa.org](http://design.dsausa.org) 
 
 ### Quick Tour
 
-This repo currently has two sibling repositories, `./react` and `./wc`.
+This repo currently has a root package and two sibling packages, `./react` and `./wc`.
 
 Each corresponds to a published package: `@dsa-ui/react` for native React components and `@dsa-ui/wc` for web components that can be used in any other framework (or no framework).
+
+>#### `.`
+
+The root! You can run the node scripts listed below from this directory. This allows us to keep our two packages synced.
 
 >#### `./.vs-code`
 
@@ -46,19 +50,18 @@ npm run init
 npm start
 ```
 
-- Starts a build of web components, watches for changes
+- `init` install dependencies in all three packages: root, wc, and react.
+- Starts a dev build of web components and watches for changes
 - Builds a custom elements manifest that helps Storybook generate helpful docs
 - Starts a Storybook server on `http://localhost:6006`
-
-_Note: The cem mapping complexity can be removed if we move Storybook to the React project. However, that would require rebuilding the React project on every change, which would add latency to the hot reload._
 
 ### Build For Production
 
 ```bash
-npm run build
+npm run build:prod
 ```
 
-Builds web components and syncs the React library.
+Builds optimized web components and syncs the React library.
 
 ### Run Tests
 
