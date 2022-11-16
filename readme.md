@@ -74,7 +74,7 @@ __Patch__ for internal changes, __minor__ for new features, and __major__ for br
 npm run bump --newversion=patch
 ```
 
-This will ensure tests pass, bump versions on all three `package.json`s, push a version commit, and publish the new versions of the packages.
+This will ensure tests pass and then bump versions on all three `package.json`s. In order to publish to NPM and deploy to Github Pages, the corresponding PR should have the label `bump`.
 
 ## Creating New Components
 

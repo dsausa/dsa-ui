@@ -5,18 +5,27 @@
   "scripts": {
     "test": "cd wc/ && npm run test",
     "start": "cd wc/ && npm start",
-    "init": "npm run init:wc && npm run init:react",
     "build": "npm run build:wc && npm run build:react",
-    "init:wc": "cd wc/ && npm ci",
-    "init:react": "cd react/ && npm ci",
-    "build:wc": "cd wc/ && npm run build",
-    "build:react": "cd react/ && npm run build",
     "bump": "npm version --commit-hooks=false --git-tag-version=false $npm_config_newversion",
+    "deploy": "storybook-to-ghpages --packages wc",
+    "init": "npm run init:wc && npm run init:react",
+    "init:ci": "npm run init:ci:wc && npm run init:ci:react",
+    "build:prod": "npm run build:prod:wc && npm run build:react",
+
+    "init:wc": "cd wc/ && npm i",
+    "init:react": "cd react/ && npm i",
+    "init:ci:wc": "cd wc/ && npm ci",
+    "init:ci:react": "cd react/ && npm ci",
+
+    "build:wc": "cd wc/ && npm run build",
+    "build:prod:wc": "cd wc/ && npm run build:prod",
+    "build:react": "cd react/ && npm run build",
+
     "bump:wc": "cd wc/ && npm version $npm_package_version",
     "bump:react": "cd react/ && npm version $npm_package_version",
+
     "preversion": "npm test",
-    "version": " concurrently -s \"all\" -n \"wc,react\" \"npm run bump:wc\" \"npm run bump:react\"",
-    "deploy": "storybook-to-ghpages --packages wc"
+    "version": "concurrently -s \"all\" -n \"wc,react\" \"npm run bump:wc\" \"npm run bump:react\""
   },
   "repository": {
     "type": "git",

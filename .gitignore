@@ -66,6 +66,7 @@ www/
 loader/
 out*/
 wc/assets/
+wc/storybook-static
 
 *~
 *.sw[mnpcod]
