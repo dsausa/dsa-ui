@@ -13,12 +13,12 @@
   "unpkg": "dist/dsa-ui/dsa-ui.esm.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nedredmond/dsa-ui",
+    "url": "https://github.com/dsausa/dsa-ui.git",
     "directory": "wc"
   },
-  "homepage": "https://nedredmond.github.io/dsa-ui/",
+  "homepage": "https://github.com/dsausa/dsa-ui/tree/main/wc#readme",
   "bugs": {
-    "url": "https://github.com/nedredmond/dsa-ui/issues"
+    "url": "https://github.com/dsausa/dsa-ui/issues"
   },
   "files": [
     "dist/",

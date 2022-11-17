@@ -5,12 +5,12 @@
   "description": "React wrapper for dsa-ui",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nedredmond/dsa-ui",
+    "url": "https://github.com/dsausa/dsa-ui.git",
     "directory": "react"
   },
-  "homepage": "https://nedredmond.github.io/dsa-ui/",
+  "homepage": "https://github.com/dsausa/dsa-ui/tree/main/react#readme",
   "bugs": {
-    "url": "https://github.com/nedredmond/dsa-ui/issues"
+    "url": "https://github.com/dsausa/dsa-ui/issues"
   },
   "scripts": {
     "build": "npm run clean && npm run compile",

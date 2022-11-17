@@ -25,14 +25,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nedredmond/dsa-ui.git"
+    "url": "https://github.com/dsausa/dsa-ui.git"
   },
   "author": "DSA NTC",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nedredmond/dsa-ui/issues"
+    "url": "https://github.com/dsausa/dsa-ui/issues"
   },
-  "homepage": "https://github.com/nedredmond/dsa-ui#readme",
+  "homepage": "https://github.com/dsausa/dsa-ui#readme",
   "devDependencies": {
     "@storybook/storybook-deployer": "^2.8.16",
     "@types/node": "^18.11.9",
