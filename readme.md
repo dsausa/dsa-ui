@@ -76,14 +76,16 @@ yarn test
 Use `patch` for internal changes, `minor` for new features, and `major` for breaking changes. If you're not sure, make it minor. For more information, see [semver](https://semver.org/).
 
 ```bash
-
-```bash
 yarn bump --patch
 ```
 
 This will ensure tests pass and, bump versions on all three `package.json`s, and create a version bump pull request. Once merged, the `main` branch will be tagged with the new version, the packages will be published to npm, and [the Storybook site](https://dsausa.github.io/dsa-ui/) will be deployed.
 
-___Note:__ In order to use this command, you must have [the GitHub CLI](https://cli.github.com/manual/) installed and have an active session._
+___NOTE:__ In order to use this command, you must have:_
+
+- _No git changes compared to `main`_
+- _[The GitHub CLI](https://cli.github.com/manual/) installed active_
+- _All tests in `./wc` passing_
 
 ## Creating New Components
 
