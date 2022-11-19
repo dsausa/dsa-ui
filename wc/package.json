@@ -37,7 +37,7 @@
     "build-storybook": "build-storybook",
     "lint": "prettier --write src/**/*{.ts,.tsx} && eslint src/**/*{.ts,.tsx}",
     "cem:build": "cem analyze --globs \"src/**/*.tsx\" --stencil",
-    "bump-to": "yarn version --new-version"
+    "bump-to": "yarn version --no-commit-hooks --no-git-tag-version --new-version"
   },
   "dependencies": {
     "@stencil/core": "^2.13.0"
