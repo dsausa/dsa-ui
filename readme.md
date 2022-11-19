@@ -52,7 +52,7 @@ yarn install
 yarn start
 ```
 
-- `init` install dependencies in all three packages: root, wc, and react.
+- Installs dependencies in all three packages: root, wc, and react.
 - Starts a dev build of web components and watches for changes
 - Builds a custom elements manifest that helps Storybook generate helpful docs
 - Starts a Storybook server on `http://localhost:6006`
@@ -73,15 +73,17 @@ yarn test
 
 ### Update the Version
 
-__Patch__ for internal changes, __minor__ for new features, and __major__ for breaking changes. If you're not sure, make it minor.
+Use `patch` for internal changes, `minor` for new features, and `major` for breaking changes. If you're not sure, make it minor. For more information, see [semver](https://semver.org/).
+
+```bash
 
 ```bash
 yarn bump --patch
 ```
 
-This will ensure tests pass and then bump versions on all three `package.json`s.
+This will ensure tests pass and, bump versions on all three `package.json`s, and create a version bump pull request. Once merged, the `main` branch will be tagged with the new version, the packages will be published to npm, and [the Storybook site](https://dsausa.github.io/dsa-ui/) will be deployed.
 
-__In order to publish to NPM and deploy to Github Pages, the corresponding PR should have the label _`bump`_.__
+___Note:__ In order to use this command, you must have [the GitHub CLI](https://cli.github.com/manual/) installed and have an active session._
 
 ## Creating New Components
 
