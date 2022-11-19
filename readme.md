@@ -48,8 +48,8 @@ Story files, which can be simple like `my-component.stories.tsx` (which takes ad
 ### Start Development
 
 ```bash
-npm run init
-npm start
+yarn install
+yarn start
 ```
 
 - `init` install dependencies in all three packages: root, wc, and react.
