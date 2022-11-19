@@ -9,6 +9,7 @@
     "bump": "yarn version --no-commit-hooks --no-git-tag-version",
     "deploy": "storybook-to-ghpages --packages wc",
     "build:prod": "yarn workspace @dsa-ui/wc build:prod && yarn workspace @dsa-ui/react build",
+    "preversion": "yarn test",
     "version": "yarn workspaces run bump-to $npm_package_version"
   },
   "repository": {
