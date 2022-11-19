@@ -12,11 +12,11 @@
     "preversion": "git diff --exit-code && yarn test",
     "version": "yarn workspaces run bump-to $npm_package_version",
     "postversion": "yarn postv:branch && yarn postv:commit && yarn postv:tag && yarn postv:push && yarn postv:pr",
-    "postv:branch": "git switch -c $npm_package_version && git push -u origin $npm_package_version",
+    "postv:branch": "git switch -C $npm_package_version && git push -u -f origin $npm_package_version",
     "postv:commit": "git add . && git commit -m 'Version $npm_package_version'",
     "postv:tag": "git tag -a v$npm_package_version -m 'Version $npm_package_version'",
     "postv:push": "git push --follow-tags",
-    "postv:pr": "gh pr create -t 'Bump version: $npm_package_version' -b 'Bumps to version $npm_package_version' -B main -H $npm_package_version -l 'bump'"
+    "postv:pr": "gh pr create -t \"Bump version: $(npm_package_version)\" -b \"Bumps to version $(npm_package_version)\" -B main -H $npm_package_version -l 'bump'"
   },
   "repository": {
     "type": "git",
