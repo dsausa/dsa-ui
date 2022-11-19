@@ -5,12 +5,11 @@
   "scripts": {
     "test": "yarn workspace @dsa-ui/wc test",
     "start": "yarn workspace @dsa-ui/wc start",
-    "build:dev": "yarn workspaces build",
-    "bump": "yarn version --no-commit-hooks --no-git-tag-version --$npm_config_newversion",
+    "build": "yarn workspaces run build",
+    "bump": "yarn version --no-commit-hooks --no-git-tag-version",
     "deploy": "storybook-to-ghpages --packages wc",
     "build:prod": "yarn workspace @dsa-ui/wc build:prod && yarn workspace @dsa-ui/react build",
-    "preversion": "yarn test",
-    "version": "yarn workspaces run version --$npm_package_version"
+    "version": "yarn workspaces run bump-to $npm_package_version --no-commit-hooks --no-git-tag-version"
   },
   "repository": {
     "type": "git",

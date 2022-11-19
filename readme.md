@@ -60,7 +60,7 @@ npm start
 ### Build For Production
 
 ```bash
-npm run build:prod
+yarn build:prod
 ```
 
 Builds optimized web components and syncs the React library.
@@ -68,18 +68,20 @@ Builds optimized web components and syncs the React library.
 ### Run Tests
 
 ```bash
-npm test
+yarn test
 ```
 
-### Publish a change to NPM
+### Update the Version
 
-__Patch__ for internal changes, __minor__ for new features, and __major__ for breaking changes. If you're not sure, make it minor. (This breakdown came from Copilot and I am down with it.)
+__Patch__ for internal changes, __minor__ for new features, and __major__ for breaking changes. If you're not sure, make it minor.
 
 ```bash
-npm run bump --newversion=patch
+yarn bump --patch
 ```
 
-This will ensure tests pass and then bump versions on all three `package.json`s. In order to publish to NPM and deploy to Github Pages, the corresponding PR should have the label `bump`.
+This will ensure tests pass and then bump versions on all three `package.json`s.
+
+__In order to publish to NPM and deploy to Github Pages, the corresponding PR should have the label _`bump`_.__
 
 ## Creating New Components
 
