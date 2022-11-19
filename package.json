@@ -1,7 +1,7 @@
 {
   "name": "dsa-ui",
   "description": "DSA Design System",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "scripts": {
     "test": "yarn workspace @dsa-ui/wc test",
     "start": "yarn workspace @dsa-ui/wc start",
