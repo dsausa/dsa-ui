@@ -61,7 +61,7 @@
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react": "^7.31.8",
-    "jest": "^27.4.5",
+    "jest": "^29.3.1",
     "jest-cli": "^27.4.5",
     "lit-html": "^2.3.1",
     "postcss": "^8.4.17",
