@@ -3,25 +3,20 @@
   "description": "DSA Design System",
   "version": "0.0.6",
   "scripts": {
-    "test": "cd wc/ && npm run test",
-    "start": "cd wc/ && npm start",
-    "build": "npm run build:wc && npm run build:react",
-    "bump": "npm version --commit-hooks=false --git-tag-version=false $npm_config_newversion",
+    "test": "yarn workspace @dsa-ui/wc test",
+    "start": "yarn workspace @dsa-ui/wc start",
+    "build": "yarn workspaces run build",
+    "bump": "yarn version --no-commit-hooks --no-git-tag-version",
     "deploy": "storybook-to-ghpages --packages wc",
-    "init": "concurrently -s \"all\" -n \"root,wc,react\" \"npm i\" \"npm run init:wc\" \"npm run init:react\"",
-    "init:ci": "concurrently -s \"all\" -n \"root,wc,react\" \"npm ci\" \"npm run init:ci:wc\" \"npm run init:ci:react\"",
-    "build:prod": "npm run build:prod:wc && npm run build:react",
-    "init:wc": "cd wc/ && npm i",
-    "init:react": "cd react/ && npm i",
-    "init:ci:wc": "cd wc/ && npm ci",
-    "init:ci:react": "cd react/ && npm ci",
-    "build:wc": "cd wc/ && npm run build",
-    "build:prod:wc": "cd wc/ && npm run build:prod",
-    "build:react": "cd react/ && npm run build",
-    "bump:wc": "cd wc/ && npm version $npm_package_version",
-    "bump:react": "cd react/ && npm version $npm_package_version",
-    "preversion": "npm test",
-    "version": "concurrently -s \"all\" -n \"wc,react\" \"npm run bump:wc\" \"npm run bump:react\""
+    "build:prod": "yarn workspace @dsa-ui/wc build:prod && yarn workspace @dsa-ui/react build",
+    "preversion": "git diff main... --exit-code && gh auth status && yarn test",
+    "version": "yarn workspaces run bump-to $npm_package_version",
+    "postversion": "yarn postv:branch && yarn postv:commit && yarn postv:tag && yarn postv:push && yarn postv:pr",
+    "postv:branch": "git switch -c $npm_package_version && git push -u origin $npm_package_version",
+    "postv:commit": "git add . && git commit -m 'Version $npm_package_version'",
+    "postv:tag": "git tag -a v$npm_package_version -m 'Version $npm_package_version'",
+    "postv:push": "git push --follow-tags",
+    "postv:pr": "gh pr create -t \"Bump version: $npm_package_version\" -b \"Bumps to version $npm_package_version\" -B main -H $npm_package_version -l 'bump'"
   },
   "repository": {
     "type": "git",
@@ -37,5 +32,10 @@
     "@storybook/storybook-deployer": "^2.8.16",
     "@types/node": "^18.11.9",
     "concurrently": "^7.5.0"
-  }
+  },
+  "private": true,
+  "workspaces": [
+    "wc",
+    "react"
+  ]
 }

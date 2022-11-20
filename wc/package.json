@@ -27,7 +27,7 @@
   "scripts": {
     "build": "stencil build --docs-readme",
     "build:prod": "stencil build --ci --prod",
-    "start": "concurrently -k -n \"stencil,sb,cem\" -c \"white,#ff4785,blue\" \"npm run stencil:dev\" \"start-storybook -p 6006\" \"cem analyze --dev --watch\"",
+    "start": "concurrently -k -n \"stencil,sb,cem\" -c \"white,#ff4785,blue\" \"yarn stencil:dev\" \"start-storybook -p 6006\" \"cem analyze --dev --watch\"",
     "stencil:dev": "stencil build --debug --verbose --watch",
     "test": "stencil test --spec --e2e",
     "test:watch": "stencil test --spec --e2e --watchAll",
@@ -36,7 +36,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "prettier --write src/**/*{.ts,.tsx} && eslint src/**/*{.ts,.tsx}",
-    "cem:build": "cem analyze --globs \"src/**/*.tsx\" --stencil"
+    "cem:build": "cem analyze --globs \"src/**/*.tsx\" --stencil",
+    "bump-to": "yarn version --no-commit-hooks --no-git-tag-version --new-version"
   },
   "dependencies": {
     "@stencil/core": "^2.13.0"
