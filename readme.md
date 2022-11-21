@@ -1,6 +1,6 @@
-[📖 dsausa.github.io/dsa-ui](https://dsausa.github.io/dsa-ui/)
-
 # @dsa-ui
+
+[📖 dsausa.github.io/dsa-ui](https://dsausa.github.io/dsa-ui/)
 
 This is a design system built with [Stencil](https://stenciljs.com/), [Tailwind](https://tailwindcss.com/), and [Storybook](https://tailwindcss.com/) for Democratic Socialists of America sites and applications by the DSA National Tech Committee.
 
@@ -48,14 +48,15 @@ Story files, which can be simple like `my-component.stories.tsx` (which takes ad
 ### Start Development
 
 ```bash
-yarn install
-yarn start
+yarn && yarn start
 ```
 
 - Installs dependencies in all three packages: root, wc, and react.
 - Starts a dev build of web components and watches for changes
 - Builds a custom elements manifest that helps Storybook generate helpful docs
 - Starts a Storybook server on `http://localhost:6006`
+
+___NOTE:__ After the first time, simply run __`yarn start`__._
 
 ### Build For Production
 
@@ -84,8 +85,10 @@ This will ensure tests pass and, bump versions on all three `package.json`s, and
 ___NOTE:__ In order to use this command, you must have:_
 
 - _No git changes compared to `main`_
-- _[The GitHub CLI](https://cli.github.com/manual/) installed active_
 - _All tests in `./wc` passing_
+- _`ADMIN` or `MAINTAIN` role on the repo; for the script to check those permissions, you will need:_
+  - _[The GitHub CLI](https://cli.github.com/manual/) installed and logged in_
+  - _[The `gh-role` extension](https://github.com/nedredmond/gh-role) added to the CLI_
 
 ## Creating New Components
 
@@ -96,8 +99,6 @@ Inside the directory, create a `.tsx` file with the same name as the directory. 
 ### Component Structure
 
 ```tsx  
-
-
 import { Component, Prop, h } from '@stencil/core';
 
 @Component({
