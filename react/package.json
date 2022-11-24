@@ -18,7 +18,8 @@
     "compile": "npm run tsc",
     "tsc": "tsc -p .",
     "rollup": "rollup -c",
-    "bump-to": "yarn version --no-commit-hooks --no-git-tag-version --new-version"
+    "bump-to": "yarn version --no-commit-hooks --no-git-tag-version --new-version",
+    "pub": "yarn publish --access public"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.js",

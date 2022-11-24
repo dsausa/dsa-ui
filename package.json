@@ -7,6 +7,7 @@
     "start": "yarn workspace @dsa-ui/wc start",
     "build": "yarn workspaces run build",
     "bump": "yarn version --no-commit-hooks --no-git-tag-version",
+    "pub": "yarn workspaces run pub --new-version $npm_package_version",
     "deploy": "storybook-to-ghpages --packages wc",
     "build:prod": "yarn workspace @dsa-ui/wc build:prod && yarn workspace @dsa-ui/react build",
     "preversion": "git diff main... --exit-code && gh role maintain admin && yarn test",

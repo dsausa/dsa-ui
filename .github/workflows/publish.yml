@@ -7,7 +7,7 @@ on:
       - 'package.json'
       - 'package-lock.json'
 jobs:
-  publish-react:
+  publish-and-deploy:
     if: github.event.pull_request.merged == true && contains( github.event.pull_request.labels.*.name, 'bump')
     runs-on: ubuntu-latest
     steps:
@@ -19,30 +19,10 @@ jobs:
           node-version: 16
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies and build 🔧
-        run: npm run init:ci && npm run build:prod
+        run: yarn && yarn build:prod
       - name: Publish React components package on NPM 📦
-        working-directory: ./react
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-  publish-wc:
-    if: github.event.pull_request.merged == true && contains( github.event.pull_request.labels.*.name, 'bump')
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          registry-url: 'https://registry.npmjs.org'
-      - name: Install dependencies and build 🔧
-        working-directory: ./wc
-        run: npm ci && npm run build:prod
-      - name: Publish web components package on NPM 📦
-        working-directory: ./wc
-        run: npm publish --access public
+        run: yarn pub
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Deploy Storybook to GitHub Pages 🚀
-        run: npm run deploy
+        run: yarn deploy
