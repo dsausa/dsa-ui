@@ -9,7 +9,7 @@
     "bump": "yarn version --no-commit-hooks --no-git-tag-version",
     "deploy": "storybook-to-ghpages --packages wc",
     "build:prod": "yarn workspace @dsa-ui/wc build:prod && yarn workspace @dsa-ui/react build",
-    "preversion": "git diff main... --exit-code && gh auth status && yarn test",
+    "preversion": "git diff main... --exit-code && gh role maintain admin && yarn test",
     "version": "yarn workspaces run bump-to $npm_package_version",
     "postversion": "yarn postv:branch && yarn postv:commit && yarn postv:tag && yarn postv:push && yarn postv:pr",
     "postv:branch": "git switch -c $npm_package_version && git push -u origin $npm_package_version",
