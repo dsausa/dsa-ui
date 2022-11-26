@@ -1,0 +1,9 @@
+@tailwind base;
+
+:host {
+  display: block;
+}
+
+:host input {
+  @apply accent-red;
+}
