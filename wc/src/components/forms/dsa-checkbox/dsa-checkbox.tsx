@@ -60,9 +60,7 @@ export class DsaCheckbox {
   /** Host element. */
   @Element() el: HTMLElement;
 
-  @Event({
-    eventName: "_change"
-  }) _change: EventEmitter<unknown>;
+  @Event() _change: EventEmitter<unknown>;
 
   @Watch('checked')
   protected watchHandler() {

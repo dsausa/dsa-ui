@@ -47,7 +47,7 @@ describe('dsa-checkbox', () => {
     const component = page.body.querySelector('dsa-checkbox');
 
     const fn = jest.fn();
-    component.addEventListener("change", fn);
+    component.addEventListener("_change", fn);
 
     component.checked = !component.checked;
     expect(fn).toHaveBeenCalledTimes(1);

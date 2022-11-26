@@ -6,12 +6,6 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    /**
-      * Checkbox control. Light children will be used for the label.
-      * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox | MDN docs}
-      * @see {@link JSXBase.InputHTMLAttributes `<input>` attributes}
-      * @see {@link HTMLInputElement HTMLInputElement interface}
-     */
     interface DsaCheckbox {
         /**
           * Whether the command or control is checked. Note: this behaves the way it does in React, not the way it does in HTML.
@@ -62,20 +56,8 @@ export interface DsaCheckboxCustomEvent<T> extends CustomEvent<T> {
     target: HTMLDsaCheckboxElement;
 }
 declare global {
-    /**
-      * Checkbox control. Light children will be used for the label.
-      * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox | MDN docs}
-      * @see {@link JSXBase.InputHTMLAttributes `<input>` attributes}
-      * @see {@link HTMLInputElement HTMLInputElement interface}
-     */
     interface HTMLDsaCheckboxElement extends Components.DsaCheckbox, HTMLStencilElement {
     }
-    /**
-      * Checkbox control. Light children will be used for the label.
-      * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox | MDN docs}
-      * @see {@link JSXBase.InputHTMLAttributes `<input>` attributes}
-      * @see {@link HTMLInputElement HTMLInputElement interface}
-     */
     var HTMLDsaCheckboxElement: {
         prototype: HTMLDsaCheckboxElement;
         new (): HTMLDsaCheckboxElement;
@@ -92,13 +74,7 @@ declare global {
     }
 }
 declare namespace LocalJSX {
-    /**
-    * Checkbox control. Light children will be used for the label.
-    * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox | MDN docs}
-    * @see {@link JSXBase.InputHTMLAttributes `<input>` attributes}
-    * @see {@link HTMLInputElement HTMLInputElement interface}
-   */
-  interface DsaCheckbox {
+    interface DsaCheckbox {
         /**
           * Whether the command or control is checked. Note: this behaves the way it does in React, not the way it does in HTML.
          */
