@@ -118,6 +118,186 @@
           }
         }
       ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/forms/dsa-checkbox/dsa-checkbox.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "Checkbox control. Light children will be used for the label.",
+          "name": "DsaCheckbox",
+          "members": [
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Whether the command or control is checked.\nNote: this behaves the way it does in React, not the way it does in HTML."
+            },
+            {
+              "kind": "field",
+              "name": "defaultChecked",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Whether the checkbox is checked by default."
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether the form control is disabled"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "description": "Name of the form control. Submitted with the form as part of a name/value pair"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "description": "The value that will be submitted when the checkbox is checked"
+            },
+            {
+              "kind": "field",
+              "name": "el",
+              "type": {
+                "text": "HTMLElement"
+              },
+              "description": "Host element."
+            },
+            {
+              "kind": "method",
+              "name": "watchHandler",
+              "privacy": "protected"
+            },
+            {
+              "kind": "field",
+              "name": "_form",
+              "type": {
+                "text": "HTMLFormElement | undefined"
+              },
+              "privacy": "private",
+              "description": "Owner form."
+            },
+            {
+              "kind": "field",
+              "name": "_input",
+              "type": {
+                "text": "HTMLInputElement"
+              },
+              "privacy": "private",
+              "description": "Wrapped <input> element."
+            },
+            {
+              "kind": "field",
+              "name": "_onChangeInput",
+              "privacy": "private",
+              "description": "Handle onChange event on <input>"
+            },
+            {
+              "kind": "field",
+              "name": "_handleFormData",
+              "privacy": "private",
+              "description": "Participate in FormData."
+            },
+            {
+              "kind": "method",
+              "name": "_findContainingForm",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "HTMLFormElement | undefined"
+                }
+              },
+              "description": "Find the form owning this control."
+            },
+            {
+              "kind": "method",
+              "name": "render"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "checked",
+              "fieldName": "checked",
+              "type": {
+                "text": "boolean"
+              }
+            },
+            {
+              "name": "default-checked",
+              "fieldName": "defaultChecked",
+              "type": {
+                "text": "boolean"
+              }
+            },
+            {
+              "name": "disabled",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "name",
+              "fieldName": "name",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "name": "value",
+              "fieldName": "value",
+              "type": {
+                "text": "string"
+              }
+            }
+          ],
+          "tagName": "dsa-checkbox",
+          "events": [
+            {
+              "name": "_change",
+              "type": {
+                "text": "EventEmitter<unknown>"
+              }
+            }
+          ],
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DsaCheckbox",
+          "declaration": {
+            "name": "DsaCheckbox",
+            "module": "src/components/forms/dsa-checkbox/dsa-checkbox.tsx"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "dsa-checkbox",
+          "declaration": {
+            "name": "DsaCheckbox",
+            "module": "src/components/forms/dsa-checkbox/dsa-checkbox.tsx"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/forms/dsa-checkbox/test/dsa-checkbox.spec.tsx",
+      "declarations": [],
+      "exports": []
     }
   ]
 }

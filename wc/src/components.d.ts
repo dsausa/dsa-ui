@@ -6,6 +6,38 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    /**
+      * Checkbox control. Light children will be used for the label.
+      * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox | MDN docs}
+      * @see {@link JSXBase.InputHTMLAttributes `<input>` attributes}
+      * @see {@link HTMLInputElement HTMLInputElement interface}
+     */
+    interface DsaCheckbox {
+        /**
+          * Whether the command or control is checked. Note: this behaves the way it does in React, not the way it does in HTML.
+         */
+        "checked": boolean;
+        /**
+          * Whether the checkbox is checked by default.
+          * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#checked MDN docs}
+         */
+        "defaultChecked": boolean;
+        /**
+          * Whether the form control is disabled
+          * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#disabled MDN docs}
+         */
+        "disabled": boolean;
+        /**
+          * Name of the form control. Submitted with the form as part of a name/value pair
+          * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#name MDN docs}
+         */
+        "name": string;
+        /**
+          * The value that will be submitted when the checkbox is checked
+          * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#value MDN docs}
+         */
+        "value": string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -25,7 +57,29 @@ export namespace Components {
         "styling": string;
     }
 }
+export interface DsaCheckboxCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLDsaCheckboxElement;
+}
 declare global {
+    /**
+      * Checkbox control. Light children will be used for the label.
+      * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox | MDN docs}
+      * @see {@link JSXBase.InputHTMLAttributes `<input>` attributes}
+      * @see {@link HTMLInputElement HTMLInputElement interface}
+     */
+    interface HTMLDsaCheckboxElement extends Components.DsaCheckbox, HTMLStencilElement {
+    }
+    /**
+      * Checkbox control. Light children will be used for the label.
+      * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox | MDN docs}
+      * @see {@link JSXBase.InputHTMLAttributes `<input>` attributes}
+      * @see {@link HTMLInputElement HTMLInputElement interface}
+     */
+    var HTMLDsaCheckboxElement: {
+        prototype: HTMLDsaCheckboxElement;
+        new (): HTMLDsaCheckboxElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -33,10 +87,44 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "dsa-checkbox": HTMLDsaCheckboxElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    /**
+    * Checkbox control. Light children will be used for the label.
+    * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox | MDN docs}
+    * @see {@link JSXBase.InputHTMLAttributes `<input>` attributes}
+    * @see {@link HTMLInputElement HTMLInputElement interface}
+   */
+  interface DsaCheckbox {
+        /**
+          * Whether the command or control is checked. Note: this behaves the way it does in React, not the way it does in HTML.
+         */
+        "checked"?: boolean;
+        /**
+          * Whether the checkbox is checked by default.
+          * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#checked MDN docs}
+         */
+        "defaultChecked"?: boolean;
+        /**
+          * Whether the form control is disabled
+          * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#disabled MDN docs}
+         */
+        "disabled"?: boolean;
+        /**
+          * Name of the form control. Submitted with the form as part of a name/value pair
+          * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#name MDN docs}
+         */
+        "name"?: string;
+        "on_change"?: (event: DsaCheckboxCustomEvent<unknown>) => void;
+        /**
+          * The value that will be submitted when the checkbox is checked
+          * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#value MDN docs}
+         */
+        "value"?: string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -56,6 +144,7 @@ declare namespace LocalJSX {
         "styling"?: string;
     }
     interface IntrinsicElements {
+        "dsa-checkbox": DsaCheckbox;
         "my-component": MyComponent;
     }
 }
@@ -63,6 +152,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "dsa-checkbox": LocalJSX.DsaCheckbox & JSXBase.HTMLAttributes<HTMLDsaCheckboxElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
