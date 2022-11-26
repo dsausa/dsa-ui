@@ -6,13 +6,16 @@ export const formatArgs = (args: { [x: string]: any }) =>
   Object.keys(args)
     .map(key => {
       const val = args[key];
-      if (typeof val === 'boolean') {
-        return val ? key : null;
+      switch (typeof val) {
+        case 'bigint':
+        case 'boolean':
+        case 'function':
+        case 'number':
+        case 'string':
+          return `${key}="${escapeHtml(String(val))}"`;
+        default:
+          return undefined;
       }
-      if (typeof val === 'function') {
-        return null;
-      }
-      return `${key}="${val}"`;
     })
     .filter(Boolean)
     .join(' ');
@@ -42,4 +45,18 @@ export function omit<T, K extends keyof T>(obj: T, keys: K[]): Omit<T, K> {
       .map(key => [key, obj[key]]),
   ) as Omit<T, K>;
   return o;
+}
+
+/**
+ * Escape a string for use in HTML.
+ * @param unsafe String to escape.
+ * @returns String with special characters replaced by entities.
+ */
+function escapeHtml(unsafe: string): string {
+  return unsafe
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
 }
