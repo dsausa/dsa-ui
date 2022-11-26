@@ -25,6 +25,11 @@ module.exports = {
         "@stencil/strict-boolean-conditions": "off",
         // This rule seems to be broken currently.
         "@stencil/decorators-context": "off",
+        // This rule also seems to be broken.
+        "@stencil/no-unused-watch": "off",
         "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-unused-vars": ["error", {
+            "varsIgnorePattern": "^_$"
+        }]
     },
 }
