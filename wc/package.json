@@ -35,7 +35,7 @@
     "generate": "stencil generate",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint": "prettier --write src/**/*{.ts,.tsx} && eslint src/**/*{.ts,.tsx}",
+    "lint": "prettier --write {src,stories}/**/*{.ts,.tsx} && eslint {src,stories}/**/*{.ts,.tsx}",
     "cem:build": "cem analyze --globs \"src/**/*.tsx\" --stencil"
   },
   "dependencies": {
