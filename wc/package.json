@@ -67,7 +67,7 @@
     "jest-cli": "^27.4.5",
     "lit-html": "^2.3.1",
     "postcss": "^8.4.17",
-    "prettier": "2.7.1",
+    "prettier": "2.8.0",
     "puppeteer": "^19.2.2",
     "stencil-tailwind-plugin": "^1.6.0",
     "storybook-addon-designs": "^6.3.1",
