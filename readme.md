@@ -89,6 +89,7 @@ ___NOTE:__ In order to use this command, you must have:_
 - _`ADMIN` or `MAINTAIN` role on the repo; for the script to check those permissions, you will need:_
   - _[The GitHub CLI](https://cli.github.com/manual/) installed and logged in_
   - _[The `gh-role` extension](https://github.com/nedredmond/gh-role) added to the CLI_
+    - `gh extension install nedredmond/gh-role`
 
 ## Creating New Components
 
