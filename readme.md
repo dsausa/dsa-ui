@@ -10,7 +10,7 @@ It will incorporate branding from [design.dsausa.org](http://design.dsausa.org) 
 
 ## Getting Started
 
-___NOTE:__ This section assumes some familiarity with the Node.js ecosystem and the command line. If you're new to these tools, check out [the From Scratch guide](./docs/long-start.md) as well.
+___NOTE:__ This section assumes some familiarity with the Node.js ecosystem and the command line. If you're new to these tools, check out [the From Scratch guide](./docs/long-start.md).
 
 ### Quick Tour
 
