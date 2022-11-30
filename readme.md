@@ -10,6 +10,8 @@ It will incorporate branding from [design.dsausa.org](http://design.dsausa.org) 
 
 ## Getting Started
 
+___NOTE:__ This section assumes some familiarity with the Node.js ecosystem and the command line. If you're new to these tools, check out [the From Scratch guide](./docs/long-start.md) as well.
+
 ### Quick Tour
 
 This repo currently has a root package and two sibling packages, `./react` and `./wc`.
