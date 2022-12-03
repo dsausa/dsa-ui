@@ -36,7 +36,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "prettier --write {src,stories}/**/*{.ts,.tsx} && eslint {src,stories}/**/*{.ts,.tsx}",
-    "cem:build": "cem analyze --globs \"src/**/*.tsx\" --stencil",
+    "cem:build": "cem analyze --globs \"src/**/*.tsx\" --stencil"
   },
   "dependencies": {
     "@stencil/core": "^2.13.0"
@@ -47,11 +47,11 @@
     "@stencil/eslint-plugin": "^0.4.0",
     "@stencil/react-output-target": "^0.3.1",
     "@storybook/addon-actions": "^6.5.12",
-    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-essentials": "^6.4.22",
     "@storybook/addon-links": "^6.5.12",
     "@storybook/builder-webpack4": "^6.5.12",
     "@storybook/manager-webpack4": "^6.5.12",
-    "@storybook/web-components": "^6.5.12",
+    "@storybook/web-components": "^6.1.21",
     "@types/jest": "^27.0.3",
     "@types/prettier": "^2.7.1",
     "@typescript-eslint/eslint-plugin": "^5.39.0",

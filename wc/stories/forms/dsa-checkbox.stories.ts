@@ -1,9 +1,4 @@
-import { Meta, StoryFn } from '@storybook/web-components';
 import { formatArgs, omit } from '../utils/utils';
-
-type Component = HTMLElementTagNameMap['dsa-checkbox'] & {
-  innerHTML: string;
-};
 
 export default {
   title: 'Forms/Checkbox',
@@ -14,14 +9,14 @@ export default {
       url: 'https://www.figma.com/file/1Hty7YjMHXRHPwbESKUBf1/mydsa-public-01?node-id=174%3A10036',
     },
   },
-} as Meta<Component>;
+};
 
-const Template: StoryFn<Component> = args =>
+const Template = args =>
   `<dsa-checkbox ${formatArgs(omit(args, ['innerHTML']))}>${
     args.innerHTML
   }</dsa-checkbox>`;
 
-export const Default: StoryFn<Component> = Template.bind({});
+export const Default = Template.bind({});
 Default.storyName = 'Checkbox';
 Default.args = {
   defaultChecked: true,
