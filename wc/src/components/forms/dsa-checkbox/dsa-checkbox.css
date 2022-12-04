@@ -5,5 +5,5 @@
 }
 
 :host input {
-  @apply accent-red;
+  accent-color: #e70109;
 }

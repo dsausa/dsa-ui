@@ -1,5 +1,5 @@
-import {newSpecPage, SpecPage} from '@stencil/core/testing';
-import {DsaCheckbox} from '../dsa-checkbox';
+import { newSpecPage, SpecPage } from '@stencil/core/testing';
+import { DsaCheckbox } from '../dsa-checkbox';
 
 describe('dsa-checkbox', () => {
   let page: SpecPage;
@@ -32,7 +32,7 @@ describe('dsa-checkbox', () => {
   });
 
   it('syncs disabled property with its <input> element', async () => {
-    const component = page.body.querySelector("dsa-checkbox");
+    const component = page.body.querySelector('dsa-checkbox');
     const input = component.shadowRoot.querySelector('input');
 
     // component -> input
@@ -43,11 +43,11 @@ describe('dsa-checkbox', () => {
     }
   });
 
-  it("fires onchange event", async () => {
+  it('fires onchange event', async () => {
     const component = page.body.querySelector('dsa-checkbox');
 
     const fn = jest.fn();
-    component.addEventListener("_change", fn);
+    component.addEventListener('_change', fn);
 
     component.checked = !component.checked;
     expect(fn).toHaveBeenCalledTimes(1);

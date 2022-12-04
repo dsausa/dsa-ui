@@ -4,7 +4,7 @@
   "modules": [
     {
       "kind": "javascript-module",
-      "path": "src/components/my-component/my-component.tsx",
+      "path": "src/components/demo/my-component.tsx",
       "declarations": [
         {
           "kind": "class",
@@ -37,12 +37,12 @@
             },
             {
               "kind": "field",
-              "name": "styling",
+              "name": "variation",
               "type": {
                 "text": "string"
               },
               "default": "'primary'",
-              "description": "`primary` or `secondary` styling"
+              "description": "`primary` or `secondary` variation"
             },
             {
               "kind": "method",
@@ -53,15 +53,6 @@
                   "text": "string"
                 }
               }
-            },
-            {
-              "kind": "field",
-              "name": "classes",
-              "type": {
-                "text": "object"
-              },
-              "privacy": "private",
-              "default": "{\n    'primary': this.styling == 'primary',\n    'secondary': this.styling == 'secondary',\n  }"
             },
             {
               "kind": "method",
@@ -91,8 +82,8 @@
               }
             },
             {
-              "name": "styling",
-              "fieldName": "styling"
+              "name": "variation",
+              "fieldName": "variation"
             }
           ],
           "tagName": "my-component",
@@ -106,7 +97,7 @@
           "name": "MyComponent",
           "declaration": {
             "name": "MyComponent",
-            "module": "src/components/my-component/my-component.tsx"
+            "module": "src/components/demo/my-component.tsx"
           }
         },
         {
@@ -114,7 +105,7 @@
           "name": "my-component",
           "declaration": {
             "name": "MyComponent",
-            "module": "src/components/my-component/my-component.tsx"
+            "module": "src/components/demo/my-component.tsx"
           }
         }
       ]
