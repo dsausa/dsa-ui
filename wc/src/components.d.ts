@@ -33,6 +33,10 @@ export namespace Components {
         "value": string;
     }
     interface DsaEnvelopeIcon {
+        /**
+          * Icon color (currentColor by default)
+         */
+        "color": string;
     }
     interface MyComponent {
         /**
@@ -111,6 +115,10 @@ declare namespace LocalJSX {
         "value"?: string;
     }
     interface DsaEnvelopeIcon {
+        /**
+          * Icon color (currentColor by default)
+         */
+        "color"?: string;
     }
     interface MyComponent {
         /**

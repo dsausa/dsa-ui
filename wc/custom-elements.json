@@ -120,8 +120,23 @@
           "name": "EnvelopeIcon",
           "members": [
             {
+              "kind": "field",
+              "name": "color",
+              "type": {
+                "text": "string"
+              },
+              "default": "'currentColor'",
+              "description": "Whether the form control is disabled"
+            },
+            {
               "kind": "method",
               "name": "render"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "color",
+              "fieldName": "color"
             }
           ],
           "tagName": "dsa-envelope-icon",
