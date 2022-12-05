@@ -1,7 +1,7 @@
 {
   "name": "dsa-ui",
   "description": "DSA Design System",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "scripts": {
     "test": "yarn workspace @dsa-ui/wc test",
     "start": "yarn workspace @dsa-ui/wc start",
@@ -13,7 +13,7 @@
     "preversion": "git diff main... --exit-code && gh role maintain admin && yarn test",
     "version": "yarn workspaces run bump-to $npm_package_version",
     "postversion": "yarn postv:branch && yarn postv:commit && yarn postv:tag && yarn postv:push && yarn postv:pr",
-    "postv:branch": "git switch -c $npm_package_version && git push -u origin $npm_package_version",
+    "postv:branch": "git switch -C $npm_package_version && git push -u origin $npm_package_version",
     "postv:commit": "git add . && git commit -m 'Version $npm_package_version'",
     "postv:tag": "git tag -a v$npm_package_version -m 'Version $npm_package_version'",
     "postv:push": "git push --follow-tags",
