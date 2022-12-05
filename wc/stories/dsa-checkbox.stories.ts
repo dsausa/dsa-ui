@@ -1,5 +1,5 @@
 import { Meta, StoryFn } from '@storybook/web-components';
-import { formatArgs, omit } from '../utils/utils';
+import { formatArgs, omit } from './utils/utils';
 
 type Component = HTMLElementTagNameMap['dsa-checkbox'] & {
   innerHTML: string;

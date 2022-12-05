@@ -1,5 +1,6 @@
 module.exports = {
-  stories: ['../stories/**/*.stories.@(mdx|js|jsx|ts|tsx)'],
+  // stories needs to be a flat directory for the storybook-deployer package
+  stories: ['../stories/*.stories.@(mdx|js|jsx|ts|tsx)'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
