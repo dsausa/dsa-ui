@@ -46,9 +46,9 @@ export namespace Components {
          */
         "middle": string;
         /**
-          * `primary` or `secondary` styling
+          * `primary` or `secondary` variation
          */
-        "styling": string;
+        "variation": string;
     }
 }
 export interface DsaCheckboxCustomEvent<T> extends CustomEvent<T> {
@@ -115,9 +115,9 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
         /**
-          * `primary` or `secondary` styling
+          * `primary` or `secondary` variation
          */
-        "styling"?: string;
+        "variation"?: string;
     }
     interface IntrinsicElements {
         "dsa-checkbox": DsaCheckbox;

@@ -9,7 +9,7 @@ import {
   Watch,
 } from '@stencil/core';
 
-import {JSXBase} from '@stencil/core/internal';
+import { JSXBase } from '@stencil/core/internal';
 
 /**
  * Checkbox control. Light children will be used for the label.
@@ -31,31 +31,31 @@ export class DsaCheckbox {
    * Whether the command or control is checked.
    * Note: this behaves the way it does in React, not the way it does in HTML.
    */
-  @Prop({mutable: true}) checked: boolean;
+  @Prop({ mutable: true }) checked: boolean;
 
   /**
    * Whether the checkbox is checked by default.
    * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#checked MDN docs}
    */
-  @Prop({reflect: true}) defaultChecked: boolean;
+  @Prop({ reflect: true }) defaultChecked: boolean;
 
   /**
    * Whether the form control is disabled
    * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#disabled MDN docs}
    */
-  @Prop({reflect: true}) disabled = false;
+  @Prop({ reflect: true }) disabled = false;
 
   /**
    * Name of the form control. Submitted with the form as part of a name/value pair
    * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#name MDN docs}
    */
-  @Prop({reflect: true}) name: string;
+  @Prop({ reflect: true }) name: string;
 
   /**
    * The value that will be submitted when the checkbox is checked
    * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#value MDN docs}
    */
-  @Prop({reflect: true}) value: string;
+  @Prop({ reflect: true }) value: string;
 
   /** Host element. */
   @Element() el: HTMLElement;
@@ -65,7 +65,7 @@ export class DsaCheckbox {
   @Watch('checked')
   protected watchHandler() {
     this._input.checked = this.checked;
-    this._change.emit()
+    this._change.emit();
   }
 
   connectedCallback() {

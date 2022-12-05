@@ -1,17 +1,9 @@
 import { Config } from '@stencil/core';
-import tailwind, { PluginOpts, tailwindHMR } from 'stencil-tailwind-plugin';
 import { reactOutputTarget } from '@stencil/react-output-target';
-import tailwindConf from './tailwind.config';
 
 export const config: Config = {
   namespace: 'dsa-ui',
-  plugins: [
-    tailwind({
-      ...PluginOpts.DEFAULT,
-      tailwindConf,
-    }),
-    tailwindHMR(),
-  ],
+  globalStyle: 'src/dsa-ui.css',
   outputTargets: [
     reactOutputTarget({
       componentCorePackage: '@dsa-ui/wc',
