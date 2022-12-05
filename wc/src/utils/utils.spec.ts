@@ -26,7 +26,7 @@ describe('font utils', () => {
       expect(document.head.children.length).toBe(1);
       const style = document.head.children[0] as HTMLStyleElement;
       expect(style.tagName).toBe('STYLE');
-      expect(style.id).toBe('dsa-ui-font-loader');
+      expect(style.id).toBe('dsa-ui-styles-loader');
 
       // only loads fonts once, even if called multiple times
       maybeLoadGlobal();
