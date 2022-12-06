@@ -13,8 +13,10 @@ In order to develop in `dsa-ui`, you will need to set up a dev environment. This
 Follow the linked instructions to install the below tools globally on your local machine.
 
 * [Node.js](https://nodejs.org/en/download/) (JS runtime environment, ships with npm; `v16` or higher recommended)
+  * ___NOTE:__ If you contribtue to multiple projects, you may want to use [nvm](https://github.com/nvm-sh/nvm) to manage the Node.js version on a per-project basis, or [asdf](https://asdf-vm.com/#/) to manage many tools including Node.js._
 * [Git](https://git-scm.com/downloads) (version manager; `v2.23` or higher for `switch` command)
-* [Yarn Classic](https://classic.yarnpkg.com/en/docs/install) (package manager; `latest`)
+  * ___NOTE:__ If you are unfamiliar with Git, you may want to read the very brief [Git Primer](./git.md) before continuing._
+* [Yarn](https://yarnpkg.com/getting-started/install) (package manager; `latest`)
 
 ### Recommended tools
 
@@ -29,12 +31,7 @@ These tools are not required, but are recommended for a better development exper
 Navigate to a suitable directory within your terminal (e.g. `cd ~/code`), then run the following command to create a local copy of the repository:
 
 ```bash
-# via HTTPS
 git clone https://github.com/dsausa/dsa-ui.git
-# or if you have SSH keys set up
-git clone git@github.com:dsausa/dsa-ui.git
-# or if you have GitHub CLI installed
-gh repo clone dsausa/dsa-ui
 ```
 
 ## Install dependencies
@@ -69,6 +66,8 @@ If everything has gone right, your browser should open to `localhost:6006` and S
 Navigate to `./wc/src/components` and either create a new component or spend some time messing around with the existing ones to see the changes in Storybook.
 
 There are a few idiosyncrasies in the interactions between Tailwind, Stencil, and Storybook. If you run into any issues, please reach out to the team on Slack-- and if you run into a bug or a show-stopping oversight, please open an issue on GitHub.
+
+## Further reading
 
 There are a lot of great resources out there, but here are a few to get you started:
 
