@@ -1,6 +1,6 @@
 # Setup from scratch
 
-## Set up a Node.js development environment
+## :computer: Set up a Node.js development environment
 
 In order to develop in `dsa-ui`, you will need to set up a dev environment. This guide will help you set up a Node.js development environment on your local computer.
 
@@ -26,7 +26,7 @@ These tools are not required, but are recommended for a better development exper
 * [GitHub CLI](https://cli.github.com/manual/installation) (only needed for version bumps by repo admins and maintainers, but it's a great tool otherwise)
   * [gh-role](github.com/nedredmond/gh-role) (required extension for the above task)
 
-## Clone the repository
+## :two_men_holding_hands: Clone the repository
 
 Navigate to a suitable directory within your terminal (e.g. `cd ~/code`), then run the following command to create a local copy of the repository:
 
@@ -34,7 +34,7 @@ Navigate to a suitable directory within your terminal (e.g. `cd ~/code`), then r
 git clone https://github.com/dsausa/dsa-ui.git
 ```
 
-## Install dependencies
+## :package: Install dependencies
 
 Navigate into the new directory and install dependencies:
 
@@ -45,7 +45,7 @@ yarn
 
 This will install dependencies in the root directory as well as in subdirectories `react` and `wc`.
 
-## Get started
+## :runner: Get started
 
 Create a new branch for your work:
 
@@ -61,13 +61,13 @@ yarn start
 
 If everything has gone right, your browser should open to `localhost:6006` and Storybook should start up. You can now start developing and see your changes live-- once you create a story!
 
-## But wait, what now?
+## :thinking: But wait, what now?
 
 Navigate to `./wc/src/components` and either create a new component or spend some time messing around with the existing ones to see the changes in Storybook.
 
 There are a few idiosyncrasies in the interactions between Tailwind, Stencil, and Storybook. If you run into any issues, please reach out to the team on Slack-- and if you run into a bug or a show-stopping oversight, please open an issue on GitHub.
 
-## Further reading
+## :book: Further reading
 
 There are a lot of great resources out there, but here are a few to get you started:
 
