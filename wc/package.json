@@ -52,7 +52,7 @@
     "@storybook/addon-essentials": "^6.5.12",
     "@storybook/addon-links": "^6.5.12",
     "@storybook/builder-webpack4": "^6.5.12",
-    "@storybook/manager-webpack4": "^6.5.12",
+    "@storybook/manager-webpack4": "^6.5.14",
     "@storybook/web-components": "^6.5.12",
     "@types/jest": "^27.0.3",
     "@types/prettier": "^2.7.1",
