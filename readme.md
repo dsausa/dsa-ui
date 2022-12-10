@@ -2,13 +2,15 @@
 
 [📖 dsausa.github.io/dsa-ui](https://dsausa.github.io/dsa-ui/)
 
-This is a design system built with [Stencil](https://stenciljs.com/), [Tailwind](https://tailwindcss.com/), and [Storybook](https://tailwindcss.com/) for Democratic Socialists of America sites and applications by the DSA National Tech Committee.
+This is a design system built with [Stencil](https://stenciljs.com/) and [Storybook](https://storybook.js.org/) for Democratic Socialists of America sites and applications by the DSA National Tech Committee.
 
 It will incorporate branding from [design.dsausa.org](http://design.dsausa.org) and [the mydsa figma](https://www.figma.com/file/1Hty7YjMHXRHPwbESKUBf1/mydsa-public-01).
 
 > _DISCLAIMER: This is an exploratory respository and not yet officially endorsed by the DSA nor the National Tech Committee. While it is public for now, that is subject to change._
 
 ## Getting Started
+
+___NOTE:__ This section assumes some familiarity with the Node.js ecosystem and the command line. If you're new to these tools, check out [the From Scratch guide](./docs/long-start.md).
 
 ### Quick Tour
 
@@ -39,7 +41,7 @@ Generated types and a static site for development. These can be ignored.
 
 >>>#### `/components`
 
-Each component has its own directory. Each contains a `.tsx` file that contains the component itself as well as tests and stylesheets (which can be ignored in favor of tailwind).
+Each component has its own directory. Each contains a `.tsx` file that contains the component itself as well as tests and stylesheets.
 
 >>#### `/stories`
 
@@ -95,7 +97,7 @@ ___NOTE:__ In order to use this command, you must have:_
 
 Navigate to `./wc/src/components` and create a new directory for your component. The directory name should be the same as the component name. Use the prefix `dsa`; i.e., `dsa-button` or `dsa-card`.
 
-Inside the directory, create a `.tsx` file with the same name as the directory. You can use the demo file, `my-component.tsx`, as a template. Additionally, create a `.spec.ts` file for unit tests, a `.e2e.ts` file for end-to-end tests, and a `.css` file if you need styles beyond what Tailwind provides. Please ensure near-complete test coverage.
+Inside the directory, create a `.tsx` file with the same name as the directory. You can use the demo file, `my-component.tsx`, as a template. Additionally, create a `.spec.ts` file for unit tests, a `.e2e.ts` file for end-to-end tests, and a `.css` file. Please ensure near-complete test coverage.
 
 ### Component Structure
 
