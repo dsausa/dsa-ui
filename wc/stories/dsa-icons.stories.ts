@@ -1,9 +1,9 @@
 export default {
-  title: 'Icons/Envelope',
+  title: 'Icons/Inline SVG',
   component: 'dsa-envelope-icon',
   argTypes: {
     wrapperColor: { control: 'color' },
-    iconColorProp: { control: 'color' },
+    color: { control: 'color' },
     wrapperFontSize: {
       options: [
         '1em',
@@ -18,17 +18,27 @@ export default {
       ],
       control: 'select',
     },
+    kind: {
+      options: [
+        'calendar',
+        'envelope',
+        'identification',
+        'information-circle',
+        'map-pin',
+      ],
+      control: { type: 'radio' },
+    },
   },
   args: {
     wrapperColor: 'black',
-    wrapperFontSize: '4em',
-    iconColorProp: undefined,
+    wrapperFontSize: '2em',
+    kind: 'envelope',
   },
 };
 
 const Template = args =>
   `<p style="color:${args.wrapperColor};font-size:${args.wrapperFontSize}">
-    <dsa-envelope-icon color="${args.iconColorProp}"></dsa-envelope-icon> Icon
+    <dsa-${args.kind}-icon color="${args.color}"></dsa-${args.kind}-icon> dsa-${args.kind}-icon
   </p>
   <p>
     Inside parent with color: ${args.wrapperColor} & font-size: ${args.wrapperFontSize}
@@ -36,3 +46,5 @@ const Template = args =>
   `;
 
 export const Default = Template.bind({});
+Default.storyName = 'Icons';
+Default.args = {};
