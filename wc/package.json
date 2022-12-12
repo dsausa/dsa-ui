@@ -41,7 +41,7 @@
     "pub": "yarn publish --access public"
   },
   "dependencies": {
-    "@stencil/core": "^2.13.0"
+    "@stencil/core": "^2.20.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",
