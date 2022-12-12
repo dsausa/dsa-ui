@@ -38,10 +38,14 @@ export default {
 
 const Template = args =>
   `<p style="color:${args.wrapperColor};font-size:${args.wrapperFontSize}">
-    <dsa-${args.kind}-icon color="${args.color}"></dsa-${args.kind}-icon> dsa-${args.kind}-icon
+    <dsa-${args.kind}-icon ${args.color && `color="${args.color}"`}></dsa-${
+    args.kind
+  }-icon> dsa-${args.kind}-icon
   </p>
   <p>
-    Inside parent with color: ${args.wrapperColor} & font-size: ${args.wrapperFontSize}
+    Inside parent with color: ${args.wrapperColor} & font-size: ${
+    args.wrapperFontSize
+  }
   </p>
   `;
 
