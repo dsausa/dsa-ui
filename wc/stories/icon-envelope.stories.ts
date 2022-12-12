@@ -5,20 +5,33 @@ export default {
     wrapperColor: { control: 'color' },
     iconColorProp: { control: 'color' },
     wrapperFontSize: {
-      options: ['1em', '.5em', '2em', '1rem', '2.5rem', '10px', '14px', '28px'],
+      options: [
+        '1em',
+        '.5em',
+        '2em',
+        '4em',
+        '1rem',
+        '2.5rem',
+        '10px',
+        '14px',
+        '28px',
+      ],
       control: 'select',
     },
   },
   args: {
     wrapperColor: 'black',
-    wrapperFontSize: '1em',
+    wrapperFontSize: '4em',
     iconColorProp: undefined,
   },
 };
 
 const Template = args =>
   `<p style="color:${args.wrapperColor};font-size:${args.wrapperFontSize}">
-    <dsa-envelope-icon color="${args.iconColorProp}"></dsa-envelope-icon> Icon inside parent with color: ${args.wrapperColor} & font-size: ${args.wrapperFontSize}
+    <dsa-envelope-icon color="${args.iconColorProp}"></dsa-envelope-icon> Icon
+  </p>
+  <p>
+    Inside parent with color: ${args.wrapperColor} & font-size: ${args.wrapperFontSize}
   </p>
   `;
 
