@@ -28,7 +28,7 @@
     "dist/"
   ],
   "devDependencies": {
-    "@dsa-ui/wc": "0.0.7",
+    "@dsa-ui/wc": "workspace:*",
     "@types/jest": "23.3.9",
     "@types/node": "^18.11.9",
     "@types/react": "^17.0.34",
