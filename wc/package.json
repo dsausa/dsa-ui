@@ -27,7 +27,7 @@
   "scripts": {
     "build": "stencil build --docs-readme",
     "build:prod": "stencil build --ci --prod",
-    "start": "concurrently -k -n \"stencil,sb,cem\" -c \"white,#ff4785,blue\" \"yarn stencil:dev\" \"start-storybook -p 6006\" \"cem analyze --dev --watch\"",
+    "start": "concurrently -k -n \"stencil,sb,cem\" -c \"white,#ff4785,blue\" \"pnpm stencil:dev\" \"start-storybook -p 6006\" \"cem analyze --dev --watch\"",
     "stencil:dev": "stencil build --debug --verbose --watch",
     "test": "stencil test --spec --e2e",
     "test:watch": "stencil test --spec --e2e --watchAll",
