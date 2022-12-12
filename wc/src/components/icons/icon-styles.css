@@ -2,7 +2,8 @@
   display: inline-block;
 }
 
-svg {
+svg,
+object {
   width: 1em;
   height: 1em;
   position: relative;
