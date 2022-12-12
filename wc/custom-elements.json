@@ -126,7 +126,7 @@
                 "text": "string"
               },
               "default": "'currentColor'",
-              "description": "Whether the form control is disabled"
+              "description": "Icon color (currentColor by default)"
             },
             {
               "kind": "method",
