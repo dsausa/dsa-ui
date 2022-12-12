@@ -13,13 +13,13 @@
     "url": "https://github.com/dsausa/dsa-ui/issues"
   },
   "scripts": {
-    "build": "yarn clean && yarn compile",
+    "build": "pnpm clean && pnpm compile",
     "clean": "rm -rf dist",
     "compile": "npm run tsc",
     "tsc": "tsc -p .",
     "rollup": "rollup -c",
-    "bump-to": "yarn version --no-commit-hooks --no-git-tag-version --new-version",
-    "pub": "yarn publish --access public"
+    "bump-to": "pnpm version --no-commit-hooks --no-git-tag-version --new-version",
+    "pub": "pnpm publish --access public"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.js",

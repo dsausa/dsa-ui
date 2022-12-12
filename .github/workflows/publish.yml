@@ -16,13 +16,14 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 19
           registry-url: 'https://registry.npmjs.org'
+          cache: 'pnpm'
       - name: Install dependencies and build 🔧
-        run: yarn && yarn build:prod
+        run: pnpm i --frozen-lockfile && pnpm build:prod
       - name: Publish React components package on NPM 📦
-        run: yarn pub
+        run: pnpm pub
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Deploy Storybook to GitHub Pages 🚀
-        run: yarn deploy
+        run: pnpm deploy
