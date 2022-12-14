@@ -38,7 +38,8 @@
     "lint": "prettier --write {src,stories}/**/*{.ts,.tsx,.css} && eslint {src,stories}/**/*{.ts,.tsx}",
     "cem:build": "cem analyze --globs \"src/**/*.tsx\" --stencil",
     "bump-to": "yarn version --no-commit-hooks --no-git-tag-version --new-version",
-    "pub": "yarn publish --access public"
+    "pub": "yarn publish --access public",
+    "convert-icons": "ts-node --esm -T scripts/convert-icons.mts"
   },
   "dependencies": {
     "@stencil/core": "^2.13.0"
