@@ -38,7 +38,8 @@
     "lint": "prettier --write {src,stories}/**/*{.ts,.tsx,.css} && eslint {src,stories}/**/*{.ts,.tsx}",
     "cem:build": "cem analyze --globs \"src/**/*.tsx\" --stencil",
     "bump-to": "yarn version --no-commit-hooks --no-git-tag-version --new-version",
-    "pub": "yarn publish --access public"
+    "pub": "yarn publish --access public",
+    "convert-icons": "ts-node --esm -T scripts/convert-icons.mts"
   },
   "dependencies": {
     "@stencil/core": "^2.13.0"
@@ -54,6 +55,9 @@
     "@storybook/builder-webpack4": "^6.5.12",
     "@storybook/manager-webpack4": "^6.5.12",
     "@storybook/web-components": "^6.5.12",
+    "@svgr/core": "^6.5.1",
+    "@svgr/plugin-jsx": "^6.5.1",
+    "@svgr/plugin-prettier": "^6.5.1",
     "@types/jest": "^27.0.3",
     "@types/prettier": "^2.7.1",
     "@typescript-eslint/eslint-plugin": "^5.45.1",
@@ -71,6 +75,7 @@
     "puppeteer": "^19.2.2",
     "storybook-addon-designs": "^6.3.1",
     "storybook-dark-mode": "^1.1.2",
+    "ts-node": "^10.9.1",
     "typescript": "^4.8.4"
   },
   "license": "MIT"
