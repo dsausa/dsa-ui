@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/dsausa/dsa-ui#readme",
   "devDependencies": {
+    "@changesets/cli": "^2.25.2",
     "@storybook/storybook-deployer": "^2.8.16",
     "@types/node": "^18.11.9",
     "concurrently": "^7.5.0"
