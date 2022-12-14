@@ -7,7 +7,7 @@
     "start": "pnpm -F @dsa-ui/wc start",
     "build": "pnpm -F ...@dsa-ui/wc build",
     "deploy": "storybook-to-ghpages --packages wc",
-    "build:prod": "pnpm -F @dsa-ui/wc build:prod && pnpm -F @dsa-ui/react build",
+    "build:prod": "pnpm -F @dsa-ui/wc build:prod && pnpm -F @dsa-ui/react build"
   },
   "repository": {
     "type": "git",
