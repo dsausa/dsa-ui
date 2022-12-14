@@ -66,7 +66,7 @@ importers:
       jest-cli: ^27.5.1
       lit-html: ^2.5.0
       postcss: ^8.4.20
-      prettier: 2.8.0
+      prettier: 2.8.1
       puppeteer: ^19.4.0
       storybook-addon-designs: ^6.3.1
       storybook-dark-mode: ^2.0.4
@@ -97,7 +97,7 @@ importers:
       jest-cli: 27.5.1
       lit-html: 2.5.0
       postcss: 8.4.20
-      prettier: 2.8.0
+      prettier: 2.8.1
       puppeteer: 19.4.0
       storybook-addon-designs: 6.3.1_react@17.0.2
       storybook-dark-mode: 2.0.4_6l5554ty5ajsajah6yazvrjhoe
@@ -12525,12 +12525,6 @@ packages:
 
   /prettier/2.3.0:
     resolution: {integrity: sha512-kXtO4s0Lz/DW/IJ9QdWhAf7/NmPWQXkFr/r/WkR3vyI+0v8amTDxiaQSLzs8NBlytfLWX/7uQUMIW677yLKl4w==}
-    engines: {node: '>=10.13.0'}
-    hasBin: true
-    dev: true
-
-  /prettier/2.8.0:
-    resolution: {integrity: sha512-9Lmg8hTFZKG0Asr/kW9Bp8tJjRVluO8EJQVfY2T7FMw9T5jy4I/Uvx0Rca/XWf50QQ1/SS48+6IJWnrb+2yemA==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
