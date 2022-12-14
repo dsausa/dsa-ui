@@ -17,9 +17,7 @@
     "clean": "rm -rf dist",
     "compile": "npm run tsc",
     "tsc": "tsc -p .",
-    "rollup": "rollup -c",
-    "bump-to": "pnpm version --no-commit-hooks --no-git-tag-version --new-version",
-    "pub": "pnpm publish --access public"
+    "rollup": "rollup -c"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.js",

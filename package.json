@@ -6,18 +6,8 @@
     "test": "pnpm -F @dsa-ui/wc test",
     "start": "pnpm -F @dsa-ui/wc start",
     "build": "pnpm -F ...@dsa-ui/wc build",
-    "bump": "pnpm version --no-commit-hooks --no-git-tag-version",
-    "pub": "pnpm -F ...@dsa-ui/wc run pub --new-version $npm_package_version",
     "deploy": "storybook-to-ghpages --packages wc",
     "build:prod": "pnpm -F @dsa-ui/wc build:prod && pnpm -F @dsa-ui/react build",
-    "preversion": "git diff main... --exit-code && gh role maintain admin && pnpm test",
-    "version": "pnpm -Fs run bump-to $npm_package_version",
-    "postversion": "pnpm postv:branch && pnpm postv:commit && pnpm postv:tag && pnpm postv:push && pnpm postv:pr",
-    "postv:branch": "git switch -C $npm_package_version && git push -u origin $npm_package_version",
-    "postv:commit": "git add . && git commit -m 'Version $npm_package_version'",
-    "postv:tag": "git tag -a v$npm_package_version -m 'Version $npm_package_version'",
-    "postv:push": "git push --follow-tags",
-    "postv:pr": "gh pr create -t \"Bump version: $npm_package_version\" -b \"Bumps to version $npm_package_version\" -B main -H $npm_package_version -l 'bump'"
   },
   "repository": {
     "type": "git",
