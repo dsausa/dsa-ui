@@ -3,21 +3,11 @@
   "description": "DSA Design System",
   "version": "0.0.7",
   "scripts": {
-    "test": "yarn workspace @dsa-ui/wc test",
-    "start": "yarn workspace @dsa-ui/wc start",
-    "build": "yarn workspaces run build",
-    "bump": "yarn version --no-commit-hooks --no-git-tag-version",
-    "pub": "yarn workspaces run pub --new-version $npm_package_version",
+    "test": "pnpm -F @dsa-ui/wc test",
+    "start": "pnpm -F @dsa-ui/wc start",
+    "build": "pnpm -F ...@dsa-ui/wc build",
     "deploy": "storybook-to-ghpages --packages wc",
-    "build:prod": "yarn workspace @dsa-ui/wc build:prod && yarn workspace @dsa-ui/react build",
-    "preversion": "git diff main... --exit-code && gh role maintain admin && yarn test",
-    "version": "yarn workspaces run bump-to $npm_package_version",
-    "postversion": "yarn postv:branch && yarn postv:commit && yarn postv:tag && yarn postv:push && yarn postv:pr",
-    "postv:branch": "git switch -C $npm_package_version && git push -u origin $npm_package_version",
-    "postv:commit": "git add . && git commit -m 'Version $npm_package_version'",
-    "postv:tag": "git tag -a v$npm_package_version -m 'Version $npm_package_version'",
-    "postv:push": "git push --follow-tags",
-    "postv:pr": "gh pr create -t \"Bump version: $npm_package_version\" -b \"Bumps to version $npm_package_version\" -B main -H $npm_package_version -l 'bump'"
+    "build:prod": "pnpm -F @dsa-ui/wc build:prod && pnpm -F @dsa-ui/react build"
   },
   "repository": {
     "type": "git",
@@ -30,13 +20,11 @@
   },
   "homepage": "https://github.com/dsausa/dsa-ui#readme",
   "devDependencies": {
+    "@changesets/cli": "^2.25.2",
     "@storybook/storybook-deployer": "^2.8.16",
-    "@types/node": "^18.11.9",
-    "concurrently": "^7.5.0"
+    "@types/node": "^18.11.15",
+    "concurrently": "^7.6.0"
   },
   "private": true,
-  "workspaces": [
-    "wc",
-    "react"
-  ]
+  "packageManager": "pnpm@7.18.1"
 }

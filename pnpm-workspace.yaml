@@ -1,0 +1,7 @@
+packages:
+  - 'react'
+  - 'wc'
+
+# future idea
+#   - `packages/*` to contain generated files to publish
+#   - `components` to contain the source code for the components

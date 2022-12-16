@@ -16,7 +16,7 @@ Follow the linked instructions to install the below tools globally on your local
   * ___NOTE:__ If you contribtue to multiple projects, you may want to use [nvm](https://github.com/nvm-sh/nvm) to manage the Node.js version on a per-project basis, or [asdf](https://asdf-vm.com/#/) to manage many tools including Node.js._
 * [Git](https://git-scm.com/downloads) (version manager; `v2.23` or higher for `switch` command)
   * ___NOTE:__ If you are unfamiliar with Git, you may want to read the very brief [Git Primer](./git.md) before continuing._
-* [Yarn](https://yarnpkg.com/getting-started/install) (package manager; `latest`)
+* [Pnpm](https://pnpm.io/installation) (package manager; `v7` or higher recommended)
 
 ### Recommended tools
 
@@ -40,7 +40,7 @@ Navigate into the new directory and install dependencies:
 
 ```bash
 cd dsa-ui
-yarn
+pnpm i
 ```
 
 This will install dependencies in the root directory as well as in subdirectories `react` and `wc`.
@@ -56,7 +56,7 @@ git switch -c <your-branch-name>
 This will create a new branch to track your work. You can now run the following command to start the development server:
 
 ```bash
-yarn start
+pnpm start
 ```
 
 If everything has gone right, your browser should open to `localhost:6006` and Storybook should start up. You can now start developing and see your changes live-- once you create a story!

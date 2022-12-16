@@ -50,7 +50,7 @@ Story files, which can be simple like `my-component.stories.tsx` (which takes ad
 ### Start Development
 
 ```bash
-yarn && yarn start
+pnpm i && pnpm start
 ```
 
 - Installs dependencies in all three packages: root, wc, and react.
@@ -58,12 +58,12 @@ yarn && yarn start
 - Builds a custom elements manifest that helps Storybook generate helpful docs
 - Starts a Storybook server on `http://localhost:6006`
 
-___NOTE:__ After the first time, simply run __`yarn start`__._
+___NOTE:__ After the first time, simply run __`pnpm start`__._
 
 ### Build For Production
 
 ```bash
-yarn build:prod
+pnpm build:prod
 ```
 
 Builds optimized web components and syncs the React library.
@@ -71,7 +71,7 @@ Builds optimized web components and syncs the React library.
 ### Run Tests
 
 ```bash
-yarn test
+pnpm test
 ```
 
 ### Update the Version
@@ -79,7 +79,7 @@ yarn test
 Use `patch` for internal changes, `minor` for new features, and `major` for breaking changes. If you're not sure, make it minor. For more information, see [semver](https://semver.org/).
 
 ```bash
-yarn bump --patch
+pnpm bump --patch
 ```
 
 This will ensure tests pass and, bump versions on all three `package.json`s, and create a version bump pull request. Once merged, the `main` branch will be tagged with the new version, the packages will be published to npm, and [the Storybook site](https://dsausa.github.io/dsa-ui/) will be deployed.
