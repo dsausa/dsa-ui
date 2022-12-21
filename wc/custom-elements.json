@@ -112,6 +112,338 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/icons/dsa-calendar-icon.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "CalendarIcon",
+          "members": [
+            {
+              "kind": "field",
+              "name": "color",
+              "type": {
+                "text": "string"
+              },
+              "default": "'currentColor'",
+              "description": "Icon color (currentColor by default)"
+            },
+            {
+              "kind": "method",
+              "name": "render"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "color",
+              "fieldName": "color"
+            }
+          ],
+          "tagName": "dsa-calendar-icon",
+          "events": [],
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CalendarIcon",
+          "declaration": {
+            "name": "CalendarIcon",
+            "module": "src/components/icons/dsa-calendar-icon.tsx"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "dsa-calendar-icon",
+          "declaration": {
+            "name": "CalendarIcon",
+            "module": "src/components/icons/dsa-calendar-icon.tsx"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/icons/dsa-envelope-icon.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "EnvelopeIcon",
+          "members": [
+            {
+              "kind": "field",
+              "name": "color",
+              "type": {
+                "text": "string"
+              },
+              "default": "'currentColor'",
+              "description": "Icon color (currentColor by default)"
+            },
+            {
+              "kind": "method",
+              "name": "render"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "color",
+              "fieldName": "color"
+            }
+          ],
+          "tagName": "dsa-envelope-icon",
+          "events": [],
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "EnvelopeIcon",
+          "declaration": {
+            "name": "EnvelopeIcon",
+            "module": "src/components/icons/dsa-envelope-icon.tsx"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "dsa-envelope-icon",
+          "declaration": {
+            "name": "EnvelopeIcon",
+            "module": "src/components/icons/dsa-envelope-icon.tsx"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/icons/dsa-icon.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "Icon",
+          "members": [
+            {
+              "kind": "field",
+              "name": "color",
+              "type": {
+                "text": "string"
+              },
+              "default": "'currentColor'",
+              "description": "Icon color (currentColor by default)"
+            },
+            {
+              "kind": "field",
+              "name": "kind",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "render"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "color",
+              "fieldName": "color"
+            },
+            {
+              "name": "kind",
+              "fieldName": "kind",
+              "type": {
+                "text": "string"
+              }
+            }
+          ],
+          "tagName": "dsa-icon",
+          "events": [],
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Icon",
+          "declaration": {
+            "name": "Icon",
+            "module": "src/components/icons/dsa-icon.tsx"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "dsa-icon",
+          "declaration": {
+            "name": "Icon",
+            "module": "src/components/icons/dsa-icon.tsx"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/icons/dsa-identification-icon.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "IdentificationIcon",
+          "members": [
+            {
+              "kind": "field",
+              "name": "color",
+              "type": {
+                "text": "string"
+              },
+              "default": "'currentColor'",
+              "description": "Icon color (currentColor by default)"
+            },
+            {
+              "kind": "method",
+              "name": "render"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "color",
+              "fieldName": "color"
+            }
+          ],
+          "tagName": "dsa-identification-icon",
+          "events": [],
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "IdentificationIcon",
+          "declaration": {
+            "name": "IdentificationIcon",
+            "module": "src/components/icons/dsa-identification-icon.tsx"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "dsa-identification-icon",
+          "declaration": {
+            "name": "IdentificationIcon",
+            "module": "src/components/icons/dsa-identification-icon.tsx"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/icons/dsa-information-circle-icon.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "InformationCircleIcon",
+          "members": [
+            {
+              "kind": "field",
+              "name": "color",
+              "type": {
+                "text": "string"
+              },
+              "default": "'currentColor'",
+              "description": "Icon color (currentColor by default)"
+            },
+            {
+              "kind": "method",
+              "name": "render"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "color",
+              "fieldName": "color"
+            }
+          ],
+          "tagName": "dsa-information-circle-icon",
+          "events": [],
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "InformationCircleIcon",
+          "declaration": {
+            "name": "InformationCircleIcon",
+            "module": "src/components/icons/dsa-information-circle-icon.tsx"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "dsa-information-circle-icon",
+          "declaration": {
+            "name": "InformationCircleIcon",
+            "module": "src/components/icons/dsa-information-circle-icon.tsx"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/icons/dsa-map-pin-icon.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MapPinIcon",
+          "members": [
+            {
+              "kind": "field",
+              "name": "color",
+              "type": {
+                "text": "string"
+              },
+              "default": "'currentColor'",
+              "description": "Icon color (currentColor by default)"
+            },
+            {
+              "kind": "method",
+              "name": "render"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "color",
+              "fieldName": "color"
+            }
+          ],
+          "tagName": "dsa-map-pin-icon",
+          "events": [],
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MapPinIcon",
+          "declaration": {
+            "name": "MapPinIcon",
+            "module": "src/components/icons/dsa-map-pin-icon.tsx"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "dsa-map-pin-icon",
+          "declaration": {
+            "name": "MapPinIcon",
+            "module": "src/components/icons/dsa-map-pin-icon.tsx"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/forms/dsa-checkbox/dsa-checkbox.tsx",
       "declarations": [
         {
