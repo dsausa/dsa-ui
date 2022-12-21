@@ -6,8 +6,6 @@ This is a design system built with [Stencil](https://stenciljs.com/) and [Storyb
 
 It will incorporate branding from [design.dsausa.org](http://design.dsausa.org) and [the mydsa figma](https://www.figma.com/file/1Hty7YjMHXRHPwbESKUBf1/mydsa-public-01).
 
-> _DISCLAIMER: This is an exploratory respository and not yet officially endorsed by the DSA nor the National Tech Committee. While it is public for now, that is subject to change._
-
 ## Getting Started
 
 ___NOTE:__ This section assumes some familiarity with the Node.js ecosystem and the command line. If you're new to these tools, check out [the From Scratch guide](./docs/long-start.md).
