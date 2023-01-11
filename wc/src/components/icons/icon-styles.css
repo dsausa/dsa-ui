@@ -1,0 +1,11 @@
+:host {
+  display: inline-block;
+}
+
+svg,
+object {
+  width: 1em;
+  height: 1em;
+  position: relative;
+  top: 0.13em;
+}

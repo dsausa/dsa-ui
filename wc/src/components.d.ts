@@ -6,6 +6,12 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface DsaCalendarIcon {
+        /**
+          * Icon color (currentColor by default)
+         */
+        "color": string;
+    }
     interface DsaCheckbox {
         /**
           * Whether the command or control is checked. Note: this behaves the way it does in React, not the way it does in HTML.
@@ -32,6 +38,37 @@ export namespace Components {
          */
         "value": string;
     }
+    interface DsaEnvelopeIcon {
+        /**
+          * Icon color (currentColor by default)
+         */
+        "color": string;
+    }
+    interface DsaIcon {
+        /**
+          * Icon color (currentColor by default)
+         */
+        "color": string;
+        "kind": string;
+    }
+    interface DsaIdentificationIcon {
+        /**
+          * Icon color (currentColor by default)
+         */
+        "color": string;
+    }
+    interface DsaInformationCircleIcon {
+        /**
+          * Icon color (currentColor by default)
+         */
+        "color": string;
+    }
+    interface DsaMapPinIcon {
+        /**
+          * Icon color (currentColor by default)
+         */
+        "color": string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -56,11 +93,47 @@ export interface DsaCheckboxCustomEvent<T> extends CustomEvent<T> {
     target: HTMLDsaCheckboxElement;
 }
 declare global {
+    interface HTMLDsaCalendarIconElement extends Components.DsaCalendarIcon, HTMLStencilElement {
+    }
+    var HTMLDsaCalendarIconElement: {
+        prototype: HTMLDsaCalendarIconElement;
+        new (): HTMLDsaCalendarIconElement;
+    };
     interface HTMLDsaCheckboxElement extends Components.DsaCheckbox, HTMLStencilElement {
     }
     var HTMLDsaCheckboxElement: {
         prototype: HTMLDsaCheckboxElement;
         new (): HTMLDsaCheckboxElement;
+    };
+    interface HTMLDsaEnvelopeIconElement extends Components.DsaEnvelopeIcon, HTMLStencilElement {
+    }
+    var HTMLDsaEnvelopeIconElement: {
+        prototype: HTMLDsaEnvelopeIconElement;
+        new (): HTMLDsaEnvelopeIconElement;
+    };
+    interface HTMLDsaIconElement extends Components.DsaIcon, HTMLStencilElement {
+    }
+    var HTMLDsaIconElement: {
+        prototype: HTMLDsaIconElement;
+        new (): HTMLDsaIconElement;
+    };
+    interface HTMLDsaIdentificationIconElement extends Components.DsaIdentificationIcon, HTMLStencilElement {
+    }
+    var HTMLDsaIdentificationIconElement: {
+        prototype: HTMLDsaIdentificationIconElement;
+        new (): HTMLDsaIdentificationIconElement;
+    };
+    interface HTMLDsaInformationCircleIconElement extends Components.DsaInformationCircleIcon, HTMLStencilElement {
+    }
+    var HTMLDsaInformationCircleIconElement: {
+        prototype: HTMLDsaInformationCircleIconElement;
+        new (): HTMLDsaInformationCircleIconElement;
+    };
+    interface HTMLDsaMapPinIconElement extends Components.DsaMapPinIcon, HTMLStencilElement {
+    }
+    var HTMLDsaMapPinIconElement: {
+        prototype: HTMLDsaMapPinIconElement;
+        new (): HTMLDsaMapPinIconElement;
     };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
@@ -69,11 +142,23 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "dsa-calendar-icon": HTMLDsaCalendarIconElement;
         "dsa-checkbox": HTMLDsaCheckboxElement;
+        "dsa-envelope-icon": HTMLDsaEnvelopeIconElement;
+        "dsa-icon": HTMLDsaIconElement;
+        "dsa-identification-icon": HTMLDsaIdentificationIconElement;
+        "dsa-information-circle-icon": HTMLDsaInformationCircleIconElement;
+        "dsa-map-pin-icon": HTMLDsaMapPinIconElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface DsaCalendarIcon {
+        /**
+          * Icon color (currentColor by default)
+         */
+        "color"?: string;
+    }
     interface DsaCheckbox {
         /**
           * Whether the command or control is checked. Note: this behaves the way it does in React, not the way it does in HTML.
@@ -101,6 +186,37 @@ declare namespace LocalJSX {
          */
         "value"?: string;
     }
+    interface DsaEnvelopeIcon {
+        /**
+          * Icon color (currentColor by default)
+         */
+        "color"?: string;
+    }
+    interface DsaIcon {
+        /**
+          * Icon color (currentColor by default)
+         */
+        "color"?: string;
+        "kind"?: string;
+    }
+    interface DsaIdentificationIcon {
+        /**
+          * Icon color (currentColor by default)
+         */
+        "color"?: string;
+    }
+    interface DsaInformationCircleIcon {
+        /**
+          * Icon color (currentColor by default)
+         */
+        "color"?: string;
+    }
+    interface DsaMapPinIcon {
+        /**
+          * Icon color (currentColor by default)
+         */
+        "color"?: string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -120,7 +236,13 @@ declare namespace LocalJSX {
         "variation"?: string;
     }
     interface IntrinsicElements {
+        "dsa-calendar-icon": DsaCalendarIcon;
         "dsa-checkbox": DsaCheckbox;
+        "dsa-envelope-icon": DsaEnvelopeIcon;
+        "dsa-icon": DsaIcon;
+        "dsa-identification-icon": DsaIdentificationIcon;
+        "dsa-information-circle-icon": DsaInformationCircleIcon;
+        "dsa-map-pin-icon": DsaMapPinIcon;
         "my-component": MyComponent;
     }
 }
@@ -128,7 +250,13 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "dsa-calendar-icon": LocalJSX.DsaCalendarIcon & JSXBase.HTMLAttributes<HTMLDsaCalendarIconElement>;
             "dsa-checkbox": LocalJSX.DsaCheckbox & JSXBase.HTMLAttributes<HTMLDsaCheckboxElement>;
+            "dsa-envelope-icon": LocalJSX.DsaEnvelopeIcon & JSXBase.HTMLAttributes<HTMLDsaEnvelopeIconElement>;
+            "dsa-icon": LocalJSX.DsaIcon & JSXBase.HTMLAttributes<HTMLDsaIconElement>;
+            "dsa-identification-icon": LocalJSX.DsaIdentificationIcon & JSXBase.HTMLAttributes<HTMLDsaIdentificationIconElement>;
+            "dsa-information-circle-icon": LocalJSX.DsaInformationCircleIcon & JSXBase.HTMLAttributes<HTMLDsaInformationCircleIconElement>;
+            "dsa-map-pin-icon": LocalJSX.DsaMapPinIcon & JSXBase.HTMLAttributes<HTMLDsaMapPinIconElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
