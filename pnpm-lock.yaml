@@ -46,7 +46,7 @@ importers:
       '@custom-elements-manifest/analyzer': ^0.6.6
       '@stencil/core': ^2.20.0
       '@stencil/eslint-plugin': ^0.4.0
-      '@stencil/react-output-target': ^0.3.1
+      '@stencil/react-output-target': ^0.5.3
       '@storybook/addon-actions': ^6.5.14
       '@storybook/addon-essentials': ^6.5.14
       '@storybook/addon-links': ^6.5.14
@@ -77,7 +77,7 @@ importers:
       '@babel/core': 7.20.5
       '@custom-elements-manifest/analyzer': 0.6.6
       '@stencil/eslint-plugin': 0.4.0_f2pnhhggqsmc2fjh4r7hm7awfe
-      '@stencil/react-output-target': 0.3.1_@stencil+core@2.20.0
+      '@stencil/react-output-target': 0.5.3_@stencil+core@2.20.0
       '@storybook/addon-actions': 6.5.14_6l5554ty5ajsajah6yazvrjhoe
       '@storybook/addon-essentials': 6.5.14_mjboeinwgzp63ab6ofvy5rpoqy
       '@storybook/addon-links': 6.5.14_6l5554ty5ajsajah6yazvrjhoe
@@ -2516,10 +2516,10 @@ packages:
       typescript: 4.9.4
     dev: true
 
-  /@stencil/react-output-target/0.3.1_@stencil+core@2.20.0:
-    resolution: {integrity: sha512-6d9pPhyajFfdxkqU/pPP2SzI7wn+EklySQc4KXlI/xcdvC2H9BzLmhmR40fR1q2TQoJbJui/nvSWhbYqkE3OBQ==}
+  /@stencil/react-output-target/0.5.3_@stencil+core@2.20.0:
+    resolution: {integrity: sha512-68jwRp35CjAcwhTJ9yFD/3n+jrHOqvEH2jreVuPVvZK+4tkhPlYlwz0d1E1RlF3jyifUSfdkWUGgXIEy8Fo3yw==}
     peerDependencies:
-      '@stencil/core': ^2.9.0
+      '@stencil/core': '>=2.0.0 || >=3 || >= 4.0.0-beta.0 || >= 4.0.0'
     dependencies:
       '@stencil/core': 2.20.0
     dev: true
@@ -8199,7 +8199,7 @@ packages:
     resolution: {integrity: sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==}
     engines: {node: '>= 4.0'}
     os: [darwin]
-    deprecated: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
+    deprecated: The v1 package contains DANGEROUS / INSECURE binaries. Upgrade to safe fsevents v2
     requiresBuild: true
     dependencies:
       bindings: 1.5.0
