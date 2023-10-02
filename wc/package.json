@@ -64,7 +64,7 @@
     "jest": "^27.5.1",
     "jest-cli": "^27.5.1",
     "lit-html": "^2.5.0",
-    "postcss": "^8.4.20",
+    "postcss": "^8.4.31",
     "prettier": "2.8.1",
     "puppeteer": "^19.4.0",
     "storybook-addon-designs": "^6.3.1",
